@@ -1,35 +1,96 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState, useEffect } from "react";
+import { Routes, Route, Link } from "react-router-dom"; // Import required components from react-router-dom
+import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0)
+// Import components for different pages
+import About from "./components/About";
+import Projects from "./components/Projects";
+import Journal from "./components/Journal";
+
+const App = () => {
+  const [darkMode, setDarkMode] = useState(false);
+  const [interests, setInterests] = useState("Watching K-Dramas");
+  const [movies, setMovies] = useState("Maze Runner");
+
+  useEffect(() => {
+    const interestsList = [
+      "Gym",
+      "Photography",
+      "Journaling",
+      "Watching the sunset",
+      "Going to the beach",
+      "Baking",
+      "Self-care activities",
+      "Traveling",
+      "Being in nature",
+      "Learning about my religion",
+      "Taking naps",
+      "Walking my cat",
+    ];
+
+    const moviesList = [
+      "Maze Runner",
+      "20th Century Girl",
+      "Venom",
+      "True Beauty",
+      "The Fault in Our Stars",
+      "Divergent",
+      "White Chicks",
+      "Black Panther",
+      "Avatar",
+      "Karate Kid",
+      "Tangled",
+      "Big Hero 6 + 200 more",
+    ];
+
+    let interestsIndex = 0;
+    let moviesIndex = 0;
+
+    const interestsInterval = setInterval(() => {
+      setInterests(interestsList[interestsIndex]);
+      interestsIndex = (interestsIndex + 1) % interestsList.length;
+    }, 3000);
+
+    const moviesInterval = setInterval(() => {
+      setMovies(moviesList[moviesIndex]);
+      moviesIndex = (moviesIndex + 1) % moviesList.length;
+    }, 3000);
+
+    return () => {
+      clearInterval(interestsInterval);
+      clearInterval(moviesInterval);
+    };
+  }, []);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+    <div className={darkMode ? "dark-mode" : ""}>
+      <header>
+        <button
+          id="darkModeToggle"
+          className="dark-mode-toggle"
+          onClick={() => setDarkMode(!darkMode)}
+        >
+          {darkMode ? "Light Mode" : "Dark Mode"}
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+        <div className="gradient radial">NOOR'S PORTFOLIO</div>
+        <nav>
+          <Link to="/" className="button-heading">ABOUT ME</Link> {/* Link to the home/About page */}
+          <Link to="/projects" className="button-heading">PROJECTS</Link>
+          <Link to="/journal" className="button-heading">JOURNAL</Link>
+        </nav>
+      </header>
 
-export default App
+      <main>
+        <Routes>
+          {/* Set the About component as the landing page */}
+          <Route path="/" element={<About />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/journal" element={<Journal />} />
+        </Routes>
+      </main>
+    </div>
+  );
+};
+
+export default App;

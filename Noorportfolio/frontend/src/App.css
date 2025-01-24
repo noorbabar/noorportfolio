@@ -1,42 +1,273 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body {
+  background-color: rgb(245, 231, 215);
+  font-family: Trebuchet MS;
+  font-size: 150%;
+  padding: 30px;
+  margin: 50px;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+.gradient {
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: repeat(3, 1fr);
+  margin: auto;
+  max-height: 250px;
+  max-width: 800px;
+  padding: 1rem;
+}
+
+@media (min-width: 600px) {
+  .gradient {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.gradient {
+  align-items: center;
+  border-radius: 16px;
+  box-shadow: 0 0 15px hsla(0, 0%, 0%, 0.922);
+  color: #fffdfd;
+  font-size: 3rem;
+  text-align: center;
+  padding: 10px 20px;
+  font-weight: 900;
+  display: flex;
+  height: 250px;
+  justify-content: center;
+  text-shadow: 0 2px 3px hsl(54, 78%, 79%);
+}
+
+.radial {
+  background-image: radial-gradient(#f9e9b9, #e26297);
+}
+
+.button-heading {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-image: radial-gradient(#ff8edd, #ffcf9f);
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.button-heading:hover {
+  background-image: radial-gradient(#fffdb4, #ffcf9f);
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+h1 {
+  color: rgba(0, 0, 0, 0.904);
+  font-family: monospace;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+p {
+  color: rgb(14, 1, 1);
+  font-family: Trebuchet MS;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.timeline {
+  max-width: 60%; 
+  display: block; 
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.card {
-  padding: 2em;
+.timeline-event {
+  background-color: #f6bccf;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
 }
 
-.read-the-docs {
-  color: #888;
+.timeline-event:hover {
+  transform: translateX(10px);
+}
+
+nav.navigation {
+  margin-bottom: 20px;
+}
+
+iframe {
+  height: 8cm;
+  width: 18cm;
+  inline-size: 1.5;
+  max-block-size: 2;
+}
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+  background-color: rgba(243, 136, 191, 0.8);
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+table td,
+table th {
+  border: 1px solid #eaade9;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #f18bd6;
+  color: #f4c4fc;
+  text-align: center;
+}
+
+td {
+  margin-right: 10px;
+}
+
+.hobbies {
+  cursor: pointer;
+  transition: transform 0.2s;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #f9e9b9;
+  font-size: 24px;
+  color: #000;
+  text-align: center;
+}
+
+.hobbies:hover {
+  transform: scale(1.05);
+}
+
+.color-change {
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.color-change:hover {
+  background-color: #f5c0e3;
+  color: #ffffff;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.social-icon img {
+  display: block;
+}
+
+.about-me-heading {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 2px 3px hsl(305, 52%, 83%);
+  transition: transform 0.3s ease, text-shadow 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.about-me-heading:hover {
+  transform: translateY(-5px);
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .gradient {
+  background-image: radial-gradient(#090808, #67625a);
+  color: #c8c3c3;
+  box-shadow: 0 0 15px hsla(0, 4%, 34%, 0.8);
+}
+
+body.dark-mode .button-heading {
+  background-image: radial-gradient(#10100e, #cfcbc1);
+}
+
+body.dark-mode .button-heading:hover {
+  background-image: radial-gradient(#514d4d, #e0d08e);
+}
+
+body.dark-mode h1 {
+  color: #d0cccc;
+}
+
+body.dark-mode p {
+  color: #dad5d5;
+}
+
+body.dark-mode .timeline-event {
+  background-color: #322d2a;
+}
+
+body.dark-mode table {
+  background-color: rgb(200, 183, 147);
+}
+
+body.dark-mode table td,
+body.dark-mode table th {
+  border: 1px solid #f2efeb;
+}
+
+body.dark-mode th {
+  background-color: #d5cccc;
+  color: #fff6f6;
+}
+
+body.dark-mode .hobbies {
+  background: #f6dbae;
+  color: #fffafa;
+}
+
+body.dark-mode .color-change {
+  background-color: #f6dbae;
+  color: #000000;
+}
+
+body.dark-mode .color-change:hover {
+  background-color: #eacdb2;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #c7c6c1;
+  color: #060606;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #f1e5c9;
+  color: #111010;
 }
