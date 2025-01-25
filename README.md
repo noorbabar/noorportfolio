@@ -1,6 +1,6 @@
 Hello! Welcome to my portfolio website
 
-It features:
+Features:
 
 - About Me Page: An introduction to my background, interests, and professional aspirations.
 - Projects Page: A showcase of my work, including key projects that demonstrate my skills in cybersecurity and software development. [lowk empty rn but i will eventually fill it]
