@@ -3,7 +3,7 @@ Hello! Welcome to my portfolio website
 It features:
 
 - About Me Page: An introduction to my background, interests, and professional aspirations.
-- Projects Page: A showcase of my work, including key projects that demonstrate my skills in cybersecurity and software development.
+- Projects Page: A showcase of my work, including key projects that demonstrate my skills in cybersecurity and software development. [lowk empty rn but i will eventually fill it]
 - Resources Page: A collection of my uni notes, LeetCode practice, C code questions and solutions, and simplified theory/concepts for courses I've taken at UNSW.
 - Articles Page: Insightful write-ups and explorations into topics related to cybersecurity and software engineering.
 - Journal Page: A timeline of my university journey, highlighting the courses I've taken and everything I've created.
