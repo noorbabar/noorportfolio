@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Routes, Route, Link } from "react-router-dom"; // Import required components from react-router-dom
+import { Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 
 // Import components for different pages
@@ -11,36 +11,18 @@ const App = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [interests, setInterests] = useState("Watching K-Dramas");
   const [movies, setMovies] = useState("Maze Runner");
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const interestsList = [
-      "Gym",
-      "Photography",
-      "Journaling",
-      "Watching the sunset",
-      "Going to the beach",
-      "Baking",
-      "Self-care activities",
-      "Traveling",
-      "Being in nature",
-      "Learning about my religion",
-      "Taking naps",
-      "Walking my cat",
+      "Gym", "Lifting", "Journaling", "Watching the sunrise",
+      "Hanging out w my friends", "Baking", "Self-care activities", "Traveling",
+      "Being in nature", "Taking naps", "Walking my cat"
     ];
 
     const moviesList = [
-      "Maze Runner",
-      "20th Century Girl",
-      "Venom",
-      "True Beauty",
-      "The Fault in Our Stars",
-      "Divergent",
-      "White Chicks",
-      "Black Panther",
-      "Avatar",
-      "Karate Kid",
-      "Tangled",
-      "Big Hero 6 + 200 more",
+      "Black Panther", "Maze Runner", "Night Agent", "Venom", "Alchemy of Souls", "The Fault in Our Stars",
+      "Divergent", "White Chicks", "Business Proposal", "Avatar", "Karate Kid", "Tangled", "Big Hero 6 + 200 more"
     ];
 
     let interestsIndex = 0;
@@ -56,39 +38,62 @@ const App = () => {
       moviesIndex = (moviesIndex + 1) % moviesList.length;
     }, 3000);
 
+    const loadingTimeout = setTimeout(() => {
+      setIsLoading(false); 
+    }, 3000);
+
     return () => {
       clearInterval(interestsInterval);
       clearInterval(moviesInterval);
+      clearTimeout(loadingTimeout);
     };
   }, []);
 
   return (
     <div className={darkMode ? "dark-mode" : ""}>
-      <header>
-        <button
-          id="darkModeToggle"
-          className="dark-mode-toggle"
-          onClick={() => setDarkMode(!darkMode)}
-        >
-          {darkMode ? "Light Mode" : "Dark Mode"}
-        </button>
-        <div className="gradient radial">NOOR'S PORTFOLIO</div>
-        <nav>
-          <Link to="/" className="button-heading">ABOUT ME</Link> {/* Link to the home/About page */}
-          <Link to="/projects" className="button-heading">PROJECTS</Link>
-          <Link to="/journal" className="button-heading">JOURNAL</Link>
-        </nav>
-      </header>
+      {isLoading ? (
+        <div className="loadingScreen">
+          <div className="cat">
+            <span>◍</span>
+            <span>◍</span>
+            <span>◍</span>
+            <span>◍</span>
+            <span>◍</span>
+            <span>◍</span>
+            <span>◍</span>
+          </div>
+          <div className="loadingText">
+           Loading Noor's Portfolio... Please Wait!
+           </div>
+        </div>
+      ) : (
+        <>
+          <header>
+            <button
+              id="darkModeToggle"
+              className="dark-mode-toggle"
+              onClick={() => setDarkMode(!darkMode)}
+            >
+              {darkMode ? "Light Mode" : "Dark Mode"}
+            </button>
+            <div className="gradient radial">NOOR'S PORTFOLIO</div>
+            <nav>
+              <Link to="/" className="button-heading">ABOUT ME</Link>
+              <Link to="/projects" className="button-heading">PROJECTS</Link>
+              <Link to="/journal" className="button-heading">JOURNAL</Link>
+            </nav>
+          </header>
 
-      <main>
-        <Routes>
-          {/* Set the About component as the landing page */}
-          <Route path="/" element={<About />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/journal" element={<Journal />} />
-        </Routes>
-      </main>
+          <main>
+            <Routes>
+              <Route path="/" element={<About />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/journal" element={<Journal />} />
+            </Routes>
+          </main>
+        </>
+      )}
     </div>
   );
 };
