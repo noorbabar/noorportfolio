@@ -15,10 +15,10 @@ const Journal = () => {
 
   return (
     <div>
-      <h1>MY UNI JOURNAL</h1>
+      <h1>MY UNI TIMELINE</h1>
       <section className="timeline">
         <div className="timeline-event">
-          <h3>February 2023 - August 2023</h3>
+          <h3>February 2023 - September 2023</h3>
           <p>
             Began my university journey at UTS doing a bachelor of cybersecurity
             and criminology. Completed web systems, digital trace and identity,
@@ -26,16 +26,16 @@ const Journal = () => {
           </p>
         </div>
         <div className="timeline-event">
-          <h3>August - December 2023</h3>
+          <h3>September - November 2023</h3>
           <p>
             Transferred to UNSW Bachelor of Computer Science. Undertook an
-            introductory course in C programming, acquiring skills in structured
-            programming and problem solving.
+            introductory course in C programming.
           </p>
         </div>
         <div className="timeline-event">
-          <h3>January - February 2024</h3>
+          <h3>November - February 2024</h3>
           <p>
+            Summer break!
             Created a time-based personal profile site using HTML, CSS & JAVA
             which helped me enter the DEVSOC training program as a Trainee.
           </p>
@@ -69,13 +69,23 @@ const Journal = () => {
         <div className="timeline-event">
           <h3>May - August 2024</h3>
           <p>
-            Undertaking Data Structures & Algorithms & Software Engineering
+            Undertaking a Gen Ed (World Religions) & Software Engineering
             Fundamentals
           </p>
         </div>
         <div className="timeline-event">
-          <h3>September - Present 2024</h3>
-          <p>Undertaking Computer System Fundamentals & Introduction to Networking and Security</p>
+          <h3>September - November 2024</h3>
+          <p> Undertaking Data Structures & Algos & Introduction to Networking and Security</p>
+        </div>
+        <div className="timeline-event">
+        <h3>January - February 2025</h3>
+        <p>Summer Break! </p>
+        <p>Undertaking a general education </p>
+        </div>
+        <div className="timeline-event">
+        <h3>February - May 2025</h3>
+        <p>Undertaking 2511,INFS2701,MATH1081 </p>
+
         </div>
       </section>
     </div>

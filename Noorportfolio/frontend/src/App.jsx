@@ -80,6 +80,8 @@ const App = () => {
             <nav>
               <Link to="/" className="button-heading">ABOUT ME</Link>
               <Link to="/projects" className="button-heading">PROJECTS</Link>
+              <Link to="/resources" className="button-heading">RESOURCES</Link>
+              <Link to="/articles" className="button-heading">ARTICLES</Link>
               <Link to="/journal" className="button-heading">JOURNAL</Link>
             </nav>
           </header>
