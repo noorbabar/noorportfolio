@@ -376,3 +376,34 @@ body.dark-mode .color-change:hover {
     opacity: 1;
   }
 }
+.fun-facts {
+  text-align: center;
+  padding: 20px;
+}
+
+.media-container {
+  padding: 10px;
+}
+
+.media {
+  width: 55%;
+  height: 280px;
+  border-radius: 2px;
+  box-shadow:  4px 8px rgba(230, 64, 147, 0.2);
+}
+
+.slick-slide {
+  margin: 0 7px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .media {
+    width: 20%;
+    margin: 10 auto;
+  }
+}
