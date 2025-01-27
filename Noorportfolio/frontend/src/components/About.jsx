@@ -79,8 +79,6 @@ const About = () => {
         I'm currently majoring in Security Engineering at UNSW, aspiring to
         become a cybersecurity Engineer, Analyst or Penetration Tester who
         safeguards the digital world.
-      </p>
-      <p>
         My passion lies in programming and creating innovative solutions that
         prioritise security and functionality. I’m driven by problem-solving and
         constantly exploring ways to grow as both a learner and a creator.
@@ -101,7 +99,7 @@ const About = () => {
 
       {showFunFacts && (
         <div className="fun-facts-section">
-          <h2>Fun Facts</h2>
+        <h1 className="about-me-heading">FUN FACTS</h1>
           <table>
             <tbody>
               <tr>
@@ -127,7 +125,7 @@ const About = () => {
             </tbody>
           </table>
 
-          <h3>THIS IS MY CAT MILO</h3>
+          <h2>THIS IS MY CAT MILO</h2>
           <Slider {...sliderSettings}>
             {catMedia.map((item, index) => (
               <div key={index} className="media-container">

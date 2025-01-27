@@ -15,7 +15,7 @@ const Journal = () => {
 
   return (
     <div>
-      <h1>MY UNI TIMELINE</h1>
+      <h2 className="about-me-heading">MY UNI TIMELINE</h2>
       <section className="timeline">
         <div className="timeline-event">
           <h3>February 2023 - September 2023</h3>

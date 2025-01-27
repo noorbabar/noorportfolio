@@ -1,7 +1,7 @@
 body {
   background-color: rgb(245, 231, 215);
   font-family: Trebuchet MS;
-  font-size: 150%;
+  font-size: 110%;
   padding: 30px;
   margin: 50px;
   text-align: center;
@@ -93,6 +93,22 @@ h1 {
   margin-bottom: 20px;
 }
 
+h2 {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+  color: #f4f1f2;
+  background: linear-gradient(135deg, #ff7e5f, #fe7b7b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 2px 3px hsl(333, 42%, 52%);
+}
+
+h2:hover {
+  transform: translateY(-2px);
+  text-shadow: 0 4px 6px rgba(20, 12, 6, 0.637);
+}
 p {
   color: rgb(14, 1, 1);
   font-family: Trebuchet MS;
