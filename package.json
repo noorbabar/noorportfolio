@@ -1,0 +1,13 @@
+{
+  "name": "noorportfolio",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "cd frontend && vite",
+    "build": "cd frontend && vite build",
+    "lint": "eslint frontend"
+  },
+  "devDependencies": {
+    "vite": "^6.0.11"
+  }
+}
