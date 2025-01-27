@@ -11,14 +11,14 @@ const About = () => {
 
   useEffect(() => {
     const interestsList = [
-      "Gym", "Lifting", "Journaling", "Watching the sunrise",
+      "Gym", "Lifting", "Journaling", "Watching the sunrise","Badmington",
       "Hanging out w my friends", "Baking", "Self-care activities", "Traveling",
-      "Taking naps", "Walking my cat"
+      "Taking naps","Chess", "Walking my cat"
     ];
 
     const moviesList = [
-      "Black Panther", "Maze Runner", "Night Agent", "Venom", "Alchemy of Souls", "The Fault in Our Stars",
-      "Divergent", "White Chicks", "Business Proposal", "Avatar", "Karate Kid", "Tangled", "Big Hero 6 + 200 more"
+      "Black Panther", "Maze Runner", "Night Agent", "Venom", "Alchemy of Souls", "Prison Break", "The Punisher",
+      "Divergent", "White Chicks", "Business Proposal", "Avatar", "Karate Kid", "Tangled", "+ 200 more"
     ];
 
     let interestsIndex = 0;
@@ -61,6 +61,8 @@ const About = () => {
     { type: "image", src: "/cat2.jpg", alt: " napping" },
     { type: "image", src: "/cat3.jpg", alt: " looking curious" },
     { type: "video", src: "/cat4.mp4", alt: "playin", autoplay: true },
+    { type: "video", src: "/cat5.mov", alt: "playin", autoplay: true },
+
   ];
 
   return (
@@ -75,12 +77,12 @@ const About = () => {
 
       <p>
         I'm currently majoring in Security Engineering at UNSW, aspiring to
-        become a cybersecurity engineer, analyst or penetration tester who
+        become a cybersecurity Engineer, Analyst or Penetration Tester who
         safeguards the digital world.
       </p>
       <p>
         My passion lies in programming and creating innovative solutions that
-        prioritise security and functionality.I’m driven by problem-solving and
+        prioritise security and functionality. I’m driven by problem-solving and
         constantly exploring ways to grow as both a learner and a creator.
       </p>
       <p>
@@ -119,7 +121,7 @@ const About = () => {
                 <td>{interests}</td>
               </tr>
               <tr>
-                <td><strong>Favourite Movies</strong></td>
+                <td><strong>Favourite Movies/Shows</strong></td>
                 <td>{movies}</td>
               </tr>
             </tbody>
