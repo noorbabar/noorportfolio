@@ -1,9 +1,9 @@
 body {
   background-color: rgb(245, 231, 215);
   font-family: Trebuchet MS;
-  font-size: 110%;
-  padding: 30px;
-  margin: 50px;
+  font-size: 1rem;
+  padding: 10px;
+  margin: 0;
   text-align: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -17,17 +17,10 @@ body {
   grid-template-rows: repeat(3, 1fr);
   margin: auto;
   max-height: 250px;
-  max-width: 800px;
+  max-width: 100%;
+  width: 90%;
   padding: 1rem;
-}
-
-@media (min-width: 600px) {
-  .gradient {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.gradient {
+  
   align-items: center;
   border-radius: 16px;
   box-shadow: 0 0 15px hsla(0, 0%, 0%, 0.922);
@@ -40,6 +33,12 @@ body {
   height: 250px;
   justify-content: center;
   text-shadow: 0 2px 3px hsl(54, 78%, 79%);
+}
+
+@media (min-width: 600px) {
+  .gradient {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
 }
 
 .radial {
@@ -116,7 +115,8 @@ p {
 }
 
 .timeline {
-  max-width: 60%; 
+  max-width: 90%;
+  width: 100%;
   display: block; 
   margin: 0 auto;
   padding: 20px;
@@ -141,10 +141,8 @@ nav.navigation {
 }
 
 iframe {
-  height: 8cm;
-  width: 18cm;
-  inline-size: 1.5;
-  max-block-size: 2;
+  height: auto;
+  width: 100%;
 }
 
 table {
@@ -417,7 +415,7 @@ body.dark-mode .color-change:hover {
   color: #000;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .media {
     width: 20%;
     margin: 10 auto;
