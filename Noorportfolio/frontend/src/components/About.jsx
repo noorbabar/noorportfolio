@@ -43,9 +43,12 @@ const About = () => {
   const sliderSettings = {
     dots: true,
     infinite: true,
-    speed: 500,
-    slidesToShow: 3,
+    speed: 300,
+    slidesToShow: 4,
+    centerMode: false,
     slidesToScroll: 1,
+    edgeFriction: 0.15,
+    variableWidth: false, 
     responsive: [
       {
         breakpoint: 768,
@@ -115,8 +118,8 @@ const About = () => {
                 <td>Comparison is the thief of joy. The only person you should try to be better than is the person you were yesterday.</td>
               </tr>
               <tr>
-                <td><strong> Fun Fact About Me </strong></td>
-                <td>I can deadlift double my body weight</td>
+                <td><strong> Fun Fact</strong></td>
+                <td>I can deadlift 1.5x my body weight</td>
               </tr>
               <tr>
                 <td><strong>Interests</strong></td>

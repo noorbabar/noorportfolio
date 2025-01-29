@@ -2,7 +2,7 @@ body {
   background-color: rgb(245, 231, 215);
   font-family: Trebuchet MS;
   font-size: 1rem;
-  padding: 10px;
+  padding: 30px;
   margin: 0;
   text-align: center;
   background-size: cover;
@@ -16,9 +16,9 @@ body {
   gap: 1rem;
   grid-template-rows: repeat(3, 1fr);
   margin: auto;
-  max-height: 250px;
+  max-height: 200px;
   max-width: 100%;
-  width: 90%;
+  width: 80%;
   padding: 1rem;
   
   align-items: center;
@@ -27,10 +27,10 @@ body {
   color: #fffdfd;
   font-size: 3rem;
   text-align: center;
-  padding: 10px 20px;
+  padding: 10px 10px;
   font-weight: 900;
   display: flex;
-  height: 250px;
+  height: 200px;
   justify-content: center;
   text-shadow: 0 2px 3px hsl(54, 78%, 79%);
 }
@@ -48,7 +48,7 @@ body {
   .button-heading {
     display: inline-block;
     padding: 10px 20px;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
     text-align: center;
     text-decoration: none;
@@ -80,7 +80,7 @@ body {
   }
   
   .fun-facts-section {
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 10px;
     box-shadow: 0 5px 15px rgba(255, 140, 220, 0.6);
   }
@@ -210,7 +210,7 @@ td {
 
 .about-me-heading {
   font-family: 'Trebuchet MS', sans-serif;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
   text-align: center;
   color: #fff;
@@ -363,7 +363,7 @@ body.dark-mode .color-change:hover {
 .cat span:nth-child(7) {
   animation-delay: 2s; 
 }
-/* Define the fade-in effect */
+
 @keyframes appear {
   0% {
     opacity: 0;
@@ -397,13 +397,17 @@ body.dark-mode .color-change:hover {
 
 .media-container {
   padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .media {
-  width: 55%;
-  height: 280px;
-  border-radius: 2px;
-  box-shadow:  4px 8px rgba(230, 64, 147, 0.2);
+  width: 80%; 
+  max-width: 60%; 
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 4px 8px rgba(230, 64, 147, 0.2);
 }
 
 .slick-slide {
@@ -417,10 +421,22 @@ body.dark-mode .color-change:hover {
 
 @media (max-width: 600px) {
   .media {
-    width: 20%;
-    margin: 10 auto;
+    width: 90%;
+    margin: 0 auto;
   }
 }
+
+@media (min-width: 600px) {
+  .media {
+    width: 80%;  
+  }
+}
+video {
+  display: block; 
+  max-width: 100%; 
+  height: auto;
+}
+
 .articles-page {
   padding: 20px;
   font-family: 'Trebuchet MS', sans-serif;
@@ -441,7 +457,7 @@ body.dark-mode .color-change:hover {
   display:block;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
+  height: 90%;
 }
 
 .article-card:hover {
@@ -449,4 +465,10 @@ body.dark-mode .color-change:hover {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
+.read-more-link {
+  color: #494545;
+}
 
+.article-date {
+  color: #5b555588;
+}
