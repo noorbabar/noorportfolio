@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 
-// Import components for different pages
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Journal from "./components/Journal";
+import Articles from "./components/Articles";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -59,8 +59,6 @@ const App = () => {
             <span>◍</span>
             <span>◍</span>
             <span>◍</span>
-            <span>◍</span>
-            <span>◍</span>
           </div>
           <div className="loadingText">
            Loading Noor's Portfolio... Please Wait!
@@ -92,6 +90,7 @@ const App = () => {
               <Route path="/about" element={<About />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/journal" element={<Journal />} />
+              <Route path="/articles" element={<Articles />} />
             </Routes>
           </main>
         </>

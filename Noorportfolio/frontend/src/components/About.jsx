@@ -11,14 +11,14 @@ const About = () => {
 
   useEffect(() => {
     const interestsList = [
-      "Gym", "Lifting", "Journaling", "Watching the sunrise","Badmington",
-      "Hanging out w my friends", "Baking", "Self-care activities", "Traveling",
+      "Gym", "Lifting", "Watching the sunrise","Badmington",
+      "Hanging out w my friends", "Baking", "Traveling",
       "Taking naps","Chess", "Walking my cat"
     ];
 
     const moviesList = [
       "Black Panther", "Maze Runner", "Night Agent", "Venom", "Alchemy of Souls", "Prison Break", "The Punisher",
-      "Divergent", "White Chicks", "Business Proposal", "Avatar", "Karate Kid", "Tangled", "+ 200 more"
+      "Divergent", "White Chicks", "Business Proposal", "Avatar", "Karate Kid", "+ 200 more"
     ];
 
     let interestsIndex = 0;
@@ -77,11 +77,11 @@ const About = () => {
 
       <p>
         I'm currently majoring in Security Engineering at UNSW, aspiring to
-        become a cybersecurity Engineer, Analyst or Penetration Tester who
+        become a Cybersecurity/Software Engineer, Analyst or Penetration Tester who
         safeguards the digital world.
         My passion lies in programming and creating innovative solutions that
         prioritise security and functionality. I’m driven by problem-solving and
-        constantly exploring ways to grow as both a learner and a creator.
+        constantly explore ways to grow as both a learner and a creator.
       </p>
       <p>
         Feel free to check out the sections above — Projects, Resources,
@@ -107,12 +107,16 @@ const About = () => {
                 <td>19</td>
               </tr>
               <tr>
-                <td><strong>Degree</strong></td>
-                <td>Computer Science</td>
+                <td><strong>Favourite Quote</strong></td>
+                <td>"When you set your mind to something, you’ll always find a way to make it work." — Imam Ghazali</td>
               </tr>
               <tr>
-                <td><strong>Major</strong></td>
-                <td>Cybersecurity</td>
+                <td><strong> Best piece of Advice </strong></td>
+                <td>Comparison is the thief of joy. The only person you should try to be better than is the person you were yesterday.</td>
+              </tr>
+              <tr>
+                <td><strong> Fun Fact About Me </strong></td>
+                <td>I can deadlift double my body weight</td>
               </tr>
               <tr>
                 <td><strong>Interests</strong></td>
