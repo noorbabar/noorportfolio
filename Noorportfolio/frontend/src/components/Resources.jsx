@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; 
 import "../App.css";
 
 const Resources = () => {
@@ -12,8 +13,7 @@ const Resources = () => {
         { title: "Arrays", link: "/arrays" },
       ],
     },
-
-];
+  ];
 
   const toggleSubject = (index) => {
     setOpenSubjects((prev) => ({
@@ -38,10 +38,10 @@ const Resources = () => {
             <ul className={`notes-list ${openSubjects[index] ? "show" : ""}`}>
               {subject.notes.map((note, idx) => (
                 <li key={idx} className="note-item">
-                  <a href={note.link} className="resource-link">
+                  <Link to={note.link} className="resource-link">
                     <i className="fas fa-file-alt"></i> 
                     {note.title}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

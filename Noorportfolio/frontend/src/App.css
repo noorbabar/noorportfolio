@@ -89,11 +89,23 @@ body {
   
 h1 {
   color: rgba(0, 0, 0, 0.904);
+  font-size:x-large;
   font-family: monospace;
   text-align: center;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
+h3 {
+  color: rgba(0, 0, 0, 0.904);
+  background-color: #f3dac971;
+  font-size: medium;
+  font-weight: 500;
+  font-family: sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
 h2 {
   font-family: 'Trebuchet MS', sans-serif;
   font-size: large;
@@ -482,4 +494,25 @@ video {
 
 .note-item i {
   margin-right: 8px;
+}
+
+.back-button, .next-topic-button {
+  background-color: rgba(5, 1, 236, 0.05);
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover, .next-topic-button:hover {
+  background: rgba(235, 191, 166, 0.261);
+}
+
+.back-button:focus, .next-topic-button:focus {
+  outline: none;
 }
