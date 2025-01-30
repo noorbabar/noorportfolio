@@ -8,11 +8,13 @@ import Journal from "./components/Journal";
 import Articles from "./components/Articles";
 import Resources from "./components/Resources";
 
+import Arrays from "./components/Course/1511/Arrays";
+import IntroToC from "./components/Course/1511/IntroToC";
+
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [interests, setInterests] = useState("Watching K-Dramas");
   const [movies, setMovies] = useState("Maze Runner");
-  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const interestsList = [
@@ -39,34 +41,14 @@ const App = () => {
       moviesIndex = (moviesIndex + 1) % moviesList.length;
     }, 3000);
 
-    const loadingTimeout = setTimeout(() => {
-      setIsLoading(false); 
-    }, 3000);
-
     return () => {
       clearInterval(interestsInterval);
       clearInterval(moviesInterval);
-      clearTimeout(loadingTimeout);
     };
   }, []);
 
   return (
     <div className={darkMode ? "dark-mode" : ""}>
-      {isLoading ? (
-        <div className="loadingScreen">
-          <div className="cat">
-            <span>◍</span>
-            <span>◍</span>
-            <span>◍</span>
-            <span>◍</span>
-            <span>◍</span>
-          </div>
-          <div className="loadingText">
-           Loading Noor's Portfolio... Please Wait!
-           </div>
-        </div>
-      ) : (
-        <>
           <header>
             <button
               id="darkModeToggle"
@@ -93,10 +75,11 @@ const App = () => {
               <Route path="/journal" element={<Journal />} />
               <Route path="/resources" element={<Resources />} />
               <Route path="/articles" element={<Articles />} />
+
+              <Route path="/arrays" element={<Arrays />} /> 
+              <Route path="/intro-to-c" element={<IntroToC />} />  
             </Routes>
           </main>
-        </>
-      )}
     </div>
   );
 };

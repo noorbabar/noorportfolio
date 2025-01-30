@@ -321,74 +321,6 @@ body.dark-mode .color-change:hover {
   color: #111010;
 }
 
-/* this is the loading screen CSS structure */
-.loadingScreen {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: rgb(245, 231, 215);
-  font-family: 'Arial', sans-serif;
-  flex-direction: column;
-}
-
-.cat {
-  font-size: 100px;
-  display: flex;
-}
-
-.cat span {
-  opacity: 0;
-  animation: appear 1s ease-in-out forwards;
-  margin: 0 5px;
-}
-
-.cat span:nth-child(1) {
-  animation-delay: 0s; 
-}
-
-.cat span:nth-child(2) {
-  animation-delay: 0.3s; 
-}
-
-.cat span:nth-child(3) {
-  animation-delay: 0.8s; 
-}
-
-.cat span:nth-child(4) {
-  animation-delay: 1.1s; 
-}
-
-.cat span:nth-child(5) {
-  animation-delay: 1.4s; 
-}
-
-@keyframes appear {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.loadingText {
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
-  margin-top: 20px;
-  text-transform: uppercase;
-  animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .fun-facts {
   text-align: center;
   padding: 20px;
@@ -475,9 +407,30 @@ video {
 }
 
 /* this is the Resources CSS structure */
+.resources-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.sidebar {
+  width: 100%;
+  max-width: 400px;
+}
+
+.about-me-heading {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.subject {
+  margin-bottom: 20px;
+}
+
 .subject-title {
   color: #322d2a;
-  background-color:rgba(5, 1, 236, 0.05);
+  background-color: rgba(5, 1, 236, 0.05);
   font-size: 15px;
   font-weight: 600;
   cursor: pointer;
@@ -490,7 +443,7 @@ video {
 }
 
 .subject-title:hover {
-  background:  rgba(235, 191, 166, 0.261);
+  background: rgba(235, 191, 166, 0.261);
 }
 
 .arrow {
@@ -498,28 +451,28 @@ video {
 }
 
 .arrow.open {
-  transform: rotate(90deg); 
+  transform: rotate(90deg);
 }
 
 .notes-list {
   list-style: none;
   font-size: 16px;
   padding-left: 15px;
-  display: none; 
+  display: none;
 }
 
 .notes-list.show {
-  display: block; 
+  display: block;
 }
 
 .resource-link {
-  color: #ec935b; 
-  text-decoration: none; 
+  color: #ec935b;
+  text-decoration: none;
 }
 
 .resource-link:hover {
   color: #000;
-  text-decoration: underline; 
+  text-decoration: underline;
 }
 
 .note-item a {
