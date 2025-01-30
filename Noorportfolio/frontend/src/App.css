@@ -1,3 +1,5 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
 body {
   background-color: rgb(245, 231, 215);
   font-family: Trebuchet MS;
@@ -45,7 +47,7 @@ body {
   background-image: radial-gradient(#f9e9b9, #e26297);
 }
 
-  .button-heading {
+.button-heading {
     display: inline-block;
     padding: 10px 20px;
     font-size: 15px;
@@ -59,13 +61,13 @@ body {
     margin-top: 20px;
   }
   
-  .button-heading:hover {
+.button-heading:hover {
     transform: scale(1.1);
     box-shadow: 0 5px 15px rgba(255, 140, 220, 0.6);
   }
 
-  .toggle-button {
-    background-color: #e296a9;
+.toggle-button {
+    background-color: #7a7a7a;
     color: #ffffff;
     border: none;
     padding: 10px 20px;
@@ -75,14 +77,14 @@ body {
     transition: background-color 0.3s ease;
   }
   
-  .toggle-button:hover {
-    background-color: #fdbe9f;
+.toggle-button:hover {
+    background-color: #ccbeb9;
   }
   
-  .fun-facts-section {
+.fun-facts-section {
     margin-top: 10px;
     padding: 10px;
-    box-shadow: 0 5px 15px rgba(255, 140, 220, 0.6);
+    box-shadow: 0 5px 15px rgb(255, 140, 163);
   }
   
 h1 {
@@ -97,17 +99,18 @@ h2 {
   font-size: large;
   font-weight: bold;
   text-align: center;
-  color: #e6a2c6;
+  color: #15040db7;
   background: linear-gradient(135deg, #ff7e5f, #fe7b7b);
   -webkit-background-clip: text;
   background-clip: text;
-  text-shadow: 0 2px 3px hsl(0, 3%, 94%);
+  text-shadow: 0 2px 3px hsla(197, 100%, 83%, 0.889);
 }
 
 h2:hover {
   transform: translateY(-2px);
-  text-shadow: 0 4px 6px rgba(210, 203, 198, 0.637);
+  text-shadow: 0 4px 6px rgba(196, 243, 251, 0.943);
 }
+
 p {
   color: rgb(14, 1, 1);
   font-family: Trebuchet MS;
@@ -131,7 +134,7 @@ p {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
 
-  .timeline-event:hover {
+.timeline-event:hover {
     transform: translateX(10px) scale(1.05);
     box-shadow: 0 5px 15px rgba(246, 188, 207, 0.6);
   }
@@ -148,7 +151,7 @@ iframe {
 table {
   border-collapse: collapse;
   width: 80%;
-  background-color: rgba(243, 136, 191, 0.8);
+  background-color: rgba(239, 163, 187, 0.824);
   margin: 20px auto;
   border-radius: 10px;
   overflow: hidden;
@@ -208,6 +211,7 @@ td {
   display: block;
 }
 
+/* this is the main title that bounces up n down CSS structure */
 .about-me-heading {
   font-family: 'Trebuchet MS', sans-serif;
   font-size: 2rem;
@@ -235,7 +239,7 @@ td {
   }
 }
 
-/* Dark Mode */
+/* this is the dark mode CSS structure */
 body.dark-mode {
   background-color: #121212;
   color: #e0e0e0;
@@ -296,7 +300,7 @@ body.dark-mode .color-change:hover {
   background-color: #eacdb2;
 }
 
-/* Dark Mode Toggle Button */
+/* this is the dark mode button CSS structure */
 .dark-mode-toggle {
   position: fixed;
   top: 10px;
@@ -317,6 +321,7 @@ body.dark-mode .color-change:hover {
   color: #111010;
 }
 
+/* this is the loading screen CSS structure */
 .loadingScreen {
   display: flex;
   justify-content: center;
@@ -357,12 +362,6 @@ body.dark-mode .color-change:hover {
 .cat span:nth-child(5) {
   animation-delay: 1.4s; 
 }
-.cat span:nth-child(6) {
-  animation-delay: 1.7s; 
-}
-.cat span:nth-child(7) {
-  animation-delay: 2s; 
-}
 
 @keyframes appear {
   0% {
@@ -395,6 +394,7 @@ body.dark-mode .color-change:hover {
   padding: 20px;
 }
 
+/* this is  milo's video CSS structure */
 .media-container {
   padding: 10px;
   display: flex;
@@ -437,6 +437,7 @@ video {
   height: auto;
 }
 
+/* this is the articles CSS structure */
 .articles-page {
   padding: 20px;
   font-family: 'Trebuchet MS', sans-serif;
@@ -449,7 +450,7 @@ video {
 }
 
 .article-card {
-  background-color: #fff;
+  background-color:rgba(5, 1, 236, 0.05);
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -471,4 +472,61 @@ video {
 
 .article-date {
   color: #5b555588;
+}
+
+/* this is the Resources CSS structure */
+.subject-title {
+  color: #322d2a;
+  background-color:rgba(5, 1, 236, 0.05);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 10px;
+  transition: background 0.2s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.subject-title:hover {
+  background:  rgba(235, 191, 166, 0.261);
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.arrow.open {
+  transform: rotate(90deg); 
+}
+
+.notes-list {
+  list-style: none;
+  font-size: 16px;
+  padding-left: 15px;
+  display: none; 
+}
+
+.notes-list.show {
+  display: block; 
+}
+
+.resource-link {
+  color: #ec935b; 
+  text-decoration: none; 
+}
+
+.resource-link:hover {
+  color: #000;
+  text-decoration: underline; 
+}
+
+.note-item a {
+  display: flex;
+  align-items: center;
+}
+
+.note-item i {
+  margin-right: 8px;
 }

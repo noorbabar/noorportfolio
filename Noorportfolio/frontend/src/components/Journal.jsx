@@ -75,7 +75,7 @@ const Journal = () => {
         </div>
         <div className="timeline-event">
           <h3>September - November 2024</h3>
-          <p> Undertaking Data Structures & Algos & Introduction to Networking and Security</p>
+          <p> Undertaking Data Structures & Algos & Introduction to Networking and Security & Computer System Fundamentals</p>
         </div>
         <div className="timeline-event">
         <h3>January - February 2025</h3>
@@ -84,7 +84,7 @@ const Journal = () => {
         </div>
         <div className="timeline-event">
         <h3>February - May 2025</h3>
-        <p>Undertaking 2511,INFS2701,MATH1081 </p>
+        <p>Undertaking Object Oriented Design & Programming,Managing Cybersecurity in the Digital Age, Discrete Math(ihatemath) </p>
 
         </div>
       </section>

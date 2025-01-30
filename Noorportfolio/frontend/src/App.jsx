@@ -6,6 +6,7 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Journal from "./components/Journal";
 import Articles from "./components/Articles";
+import Resources from "./components/Resources";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -90,6 +91,7 @@ const App = () => {
               <Route path="/about" element={<About />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/journal" element={<Journal />} />
+              <Route path="/resources" element={<Resources />} />
               <Route path="/articles" element={<Articles />} />
             </Routes>
           </main>

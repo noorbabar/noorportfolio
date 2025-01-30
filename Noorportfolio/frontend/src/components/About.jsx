@@ -79,16 +79,15 @@ const About = () => {
       </p>
 
       <p>
-        I'm currently majoring in Security Engineering at UNSW, aspiring to
+        I'm currently majoring in Security Engineering, aspiring to
         become a Cybersecurity/Software Engineer, Analyst or Penetration Tester who
-        safeguards the digital world.
-        My passion lies in programming and creating innovative solutions that
+        safeguards the digital world. My passion lies in programming and creating innovative solutions that
         prioritise security and functionality. I’m driven by problem-solving and
         constantly explore ways to grow as both a learner and a creator.
       </p>
       <p>
         Feel free to check out the sections above — Projects, Resources,
-        Articles, and Journals - to see what I’ve been working on, the
+        Articles, and Journal - to see what I’ve been working on, the
         knowledge I’ve shared, and the milestones I’ve reached along the way.
       </p>
       <div className="fun-facts-toggle">
