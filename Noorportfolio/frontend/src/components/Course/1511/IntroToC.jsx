@@ -16,12 +16,10 @@ const IntroToC = () => {
     <div>
       <h1> INTRO TO C PROGRAMMING</h1>
       <section>
-        <h3>WHAT IS C?</h3>
-        <p>Introduction to C programming language.</p>
+      <h3> content will be added soon</h3>
+        <p></p>
       </section>
       <section>
-        <h3>Basic Syntax</h3>
-        <p>Explanation of basic syntax in C programming.</p>
       </section>
 
       <button onClick={handleBackClick} className="back-button">

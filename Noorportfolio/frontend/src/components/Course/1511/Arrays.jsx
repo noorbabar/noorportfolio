@@ -16,12 +16,10 @@ const Arrays = () => {
     <div>
       <h1> ARRAYS</h1>
       <section>
-        <h3>What is an Array?</h3>
-        <p>Explanation of arrays in C programming.</p>
+        <h3> content will be added soon</h3>
+        <p></p>
       </section>
       <section>
-        <h3>Basic Syntax</h3>
-        <p>Explanation of array syntax in C programming.</p>
       </section>
 
       <button onClick={handleBackClick} className="back-button">
