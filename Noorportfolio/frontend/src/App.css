@@ -149,28 +149,6 @@ p {
   text-align: center;
 }
 
-.timeline {
-  max-width: 90%;
-  width: 100%;
-  display: block; 
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.timeline-event {
-    background-color: #f6bccf;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 30px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-.timeline-event:hover {
-    transform: translateX(10px) scale(1.05);
-    box-shadow: 0 5px 15px rgba(246, 188, 207, 0.6);
-  }
-
 nav.navigation {
   margin-bottom: 20px;
 }
@@ -298,10 +276,6 @@ body.dark-mode h1 {
 
 body.dark-mode p {
   color: #dad5d5;
-}
-
-body.dark-mode .timeline-event {
-  background-color: #322d2a;
 }
 
 body.dark-mode table {

@@ -5,7 +5,6 @@ import { FaMoon, FaSun } from 'react-icons/fa';
 
 import About from "./components/About";
 import Projects from "./components/Projects";
-import Journal from "./components/Journal";
 import Articles from "./components/Articles";
 import Resources from "./components/Resources";
 
@@ -42,7 +41,6 @@ const App = () => {
               <Link to="/projects" className="button-heading">PROJECTS</Link>
               <Link to="/resources" className="button-heading">RESOURCES</Link>
               <Link to="/articles" className="button-heading">ARTICLES</Link>
-              <Link to="/journal" className="button-heading">JOURNAL</Link>
             </nav>
           </header>
 
@@ -51,7 +49,6 @@ const App = () => {
               <Route path="/" element={<About />} />
               <Route path="/about" element={<About />} />
               <Route path="/projects" element={<Projects />} />
-              <Route path="/journal" element={<Journal />} />
               <Route path="/resources" element={<Resources />} />
               <Route path="/articles" element={<Articles />} />
 

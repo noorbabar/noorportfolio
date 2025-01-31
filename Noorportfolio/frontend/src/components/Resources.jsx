@@ -13,23 +13,47 @@ const Resources = () => {
         { title: "Arrays", link: "/arrays" },
       ],
     },
+    
     {
         subject: "Data Structures & Algorithms",
         notes: [
           { title: "Recursion", link: "/recursion" },
         ],
       },
+
       {
       subject: "Network Security",
         notes: [
 
         ],
       },
+
       {
         subject: "LeetCode",
           notes: [
               
           ],
+        },
+
+       {
+        subject: "Computer System Fundamentals",
+          notes: [
+                  
+           ],
+        },
+
+       {
+        subject: "Object Oriented Design & Programming",
+          notes: [
+                  
+           ],
+        },
+
+       {
+        subject: "Cybersecurity Management",
+          notes: [
+                      
+           ],
         },
   ];
 
