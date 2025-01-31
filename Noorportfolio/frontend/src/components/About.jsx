@@ -87,8 +87,7 @@ const About = () => {
       </p>
       <p>
         Feel free to check out the sections above — Projects, Resources,
-        Articles, and Journal - to see what I’ve been working on, the
-        knowledge I’ve shared, and the milestones I’ve reached along the way.
+        Articles --
       </p>
       <div className="fun-facts-toggle">
         <button
