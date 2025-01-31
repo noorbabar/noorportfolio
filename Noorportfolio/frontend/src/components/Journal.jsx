@@ -2,17 +2,6 @@ import React, { useEffect } from "react";
 import "../App.css";
 
 const Journal = () => {
-  useEffect(() => {
-    const darkModeToggle = document.getElementById("darkModeToggle");
-    darkModeToggle.addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
-    });
-
-    return () => {
-      darkModeToggle.removeEventListener("click", () => {});
-    };
-  }, []);
-
   return (
     <div>
       <h2 className="about-me-heading">MY UNI TIMELINE</h2>
