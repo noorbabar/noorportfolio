@@ -7,12 +7,30 @@ const Resources = () => {
 
   const resources = [
     {
-      subject: "Programming Fundamentals",
+      subject: "C Programming Fundamentals",
       notes: [
         { title: "Intro to C", link: "/intro-to-c" },
         { title: "Arrays", link: "/arrays" },
       ],
     },
+    {
+        subject: "Data Structures & Algorithms",
+        notes: [
+          { title: "Recursion", link: "/recursion" },
+        ],
+      },
+      {
+      subject: "Network Security",
+        notes: [
+
+        ],
+      },
+      {
+        subject: "LeetCode",
+          notes: [
+              
+          ],
+        },
   ];
 
   const toggleSubject = (index) => {

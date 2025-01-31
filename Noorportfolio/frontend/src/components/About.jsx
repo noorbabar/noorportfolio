@@ -95,7 +95,7 @@ const About = () => {
           onClick={() => setShowFunFacts(!showFunFacts)}
           className="toggle-button"
         >
-          {showFunFacts ? "nvm I don't want to see this" : "SHOW FUN FACTS ABOUT NOOR"}
+          {showFunFacts ? "nvm i don't want to see this" : "SHOW FUN FACTS ABOUT NOOR"}
         </button>
       </div>
 
@@ -114,11 +114,11 @@ const About = () => {
               </tr>
               <tr>
                 <td><strong> Best piece of Advice </strong></td>
-                <td>Comparison is the thief of joy. The only person you should try to be better than is the person you were yesterday.</td>
+                <td>Comparison is the thief of joy, where focus goes, energy flows -- it's you vs you :)</td>
               </tr>
               <tr>
                 <td><strong> Fun Fact</strong></td>
-                <td>I can deadlift 1.5x my body weight</td>
+                <td>I love Kdramas, Bubble Tea ( & i can RDL 1.5x my body weight)</td>
               </tr>
               <tr>
                 <td><strong>Interests</strong></td>
