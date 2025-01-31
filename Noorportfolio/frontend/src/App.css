@@ -555,3 +555,8 @@ body.dark-mode .subject-title:hover {
   background: rgba(218, 208, 198, 0.6); 
 }
 
+.centered-content {
+  width: 50%;  
+  margin: 0 auto; 
+  text-align: center; 
+}

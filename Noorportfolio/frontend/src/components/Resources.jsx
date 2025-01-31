@@ -4,7 +4,6 @@ import "../App.css";
 
 const Resources = () => {
   const [openSubjects, setOpenSubjects] = useState({});
-
   const resources = [
     {
       subject: "C Programming Fundamentals",
@@ -13,48 +12,26 @@ const Resources = () => {
         { title: "Arrays", link: "/arrays" },
       ],
     },
-    
     {
         subject: "Data Structures & Algorithms",
         notes: [
           { title: "Recursion", link: "/recursion" },
         ],
       },
-
       {
-      subject: "Network Security",
-        notes: [
-
-        ],
-      },
-
-      {
-        subject: "LeetCode",
+        subject: "LeetCode Resources",
           notes: [
-              
+            { title: "Collection Of Useful LeetCode Links", link: "/problems" },
+
           ],
         },
+        {
+            subject: "the rest will be published once i get time!",
+              notes: [
+                { title: "incoming notes include infs1701, comp1521, comp2511, comp1531, infs2701,comp6441, comp3121"},
 
-       {
-        subject: "Computer System Fundamentals",
-          notes: [
-                  
-           ],
-        },
-
-       {
-        subject: "Object Oriented Design & Programming",
-          notes: [
-                  
-           ],
-        },
-
-       {
-        subject: "Cybersecurity Management",
-          notes: [
-                      
-           ],
-        },
+              ],
+            },
   ];
 
   const toggleSubject = (index) => {
@@ -68,6 +45,7 @@ const Resources = () => {
     <div className="resources-container">
       <div className="sidebar">
         <h1 className="about-me-heading">RESOURCES</h1>
+        <h3> just some notes from a few courses i’ve taken, plus resources that might help other comp sci students :)</h3>
         {resources.map((subject, index) => (
           <div key={index} className="subject">
             <div 

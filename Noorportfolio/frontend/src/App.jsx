@@ -10,6 +10,7 @@ import Resources from "./components/Resources";
 
 import Arrays from "./components/Course/1511/Arrays";
 import IntroToC from "./components/Course/1511/IntroToC";
+import Problems from "./components/Course/LeetCode/Problems";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -54,6 +55,7 @@ const App = () => {
 
               <Route path="/arrays" element={<Arrays />} /> 
               <Route path="/intro-to-c" element={<IntroToC />} />  
+              <Route path="/problems" element={<Problems />} />  
             </Routes>
           </main>
     </div>
