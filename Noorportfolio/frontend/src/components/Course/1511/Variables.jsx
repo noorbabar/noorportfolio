@@ -60,7 +60,27 @@ const Variables = () => {
         </td>
         <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>64 bits (8 bytes)</td>
         <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
-          Very large range (depends on the system)
+          slower and uses more memory but is more precise and has a larger range.
+        </td>
+      </tr>
+      <tr>
+        <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>FLOAT</td>
+        <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
+          Stores floating-point numbers (decimals) with single precision.
+        </td>
+        <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>32 bits (4 bytes)</td>
+        <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
+        float is faster and uses less memory, but it's less precise(will be rounded).
+        </td>
+      </tr>
+      <tr>
+        <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>LONG</td>
+        <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
+          Stores long integers, which have a larger range than the standard `int`.
+        </td>
+        <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>64 bits (8 bytes)</td>
+        <td style={{ padding: "8px", borderBottom: "1px solid #ddd" }}>
+          -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
         </td>
       </tr>
     </tbody>
@@ -68,28 +88,21 @@ const Variables = () => {
 </section>
 
 
+
       <section className="note-section">
         <h3 style={{ textDecoration: "underline" }}>Understanding Variable Syntax</h3>
         <ul>
           <li>
-            <pre className="code-snippet">#include &lt;stdio.h&gt;</pre>
-            <span className="code-description">Includes the standard input/output library.</span>
-          </li>
-          <li>
-            <pre className="code-snippet">int main(void) {"{ ... }"}</pre>
-            <span className="code-description">The starting point of every C program.</span>
-          </li>
-          <li>
             <pre className="code-snippet"> int my_age;  </pre>
-            <span className="code-description"> declare an int (1. data type) named my_age (2. name) - this is a Variable definition. </span>
+            <span className="code-description"> declare the data type (int) and name it (my_age) - this is a Variable definition. </span>
           </li>
           <li>
             <pre className="code-snippet"> my_age = 19;  </pre>
-            <span className="code-description"> assign a value to the int. This is variable initialisation </span>
+            <span className="code-description"> assigning a value (19) to the int - this is initialising a variable  </span>
           </li>
           <li>
             <pre className="code-snippet"> my_age = 20;  </pre>
-            <span className="code-description"> update the value of the int. </span>
+            <span className="code-description"> update the value of the int - this is value assignment </span>
           </li>
           <li>
             <pre className="code-snippet">return 0;</pre>
