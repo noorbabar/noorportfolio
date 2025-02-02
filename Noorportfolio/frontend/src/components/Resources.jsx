@@ -10,9 +10,18 @@ const Resources = () => {
       notes: [
         { title: "Intro to C", link: "/intro-to-c" },
         { title: "Variables: Data Types", link: "/variables" },
-        { title: "Control Flow: Statements", link: "/statements" },
-        { title: "Loops", link: "/loops" },
-
+        { title: "Control Flow: If/Else Statements", link: "/statements" },
+        { title: "Loops: While & For", link: "/loops" },
+        { title: "Custom Data Types: Structs & Enums", link: "/custom" },
+        { title: "Functions & Procedures (Void Functions)", link: "/functions" },
+        { title: "Arrays", link: "/arrays" },
+        { title: "Strings", link: "/strings" },
+        { title: "2D Arrays", link: "/di-arrays" },
+        { title: "Command Line Arguments", link: "/arguments" },
+        { title: "Pointers", link: "/pointers" },
+        { title: "Dynamic Arrays & Memory", link: "/memory" },
+        { title: "Linked Lists", link: "/linked-lists" },
+        { title: "C Programming Practice: Questions and Solutions", link: "/code" },
       ],
     },
     {
@@ -48,7 +57,7 @@ const Resources = () => {
     <div className="resources-container">
       <div className="sidebar">
         <h1 className="about-me-heading">RESOURCES</h1>
-        <h3> just some notes from a few courses i’ve taken,& resources that might help other comp sci students :)</h3>
+        <h3> these are some of my notes & resources that might help other comp sci students :)</h3>
         {resources.map((subject, index) => (
           <div key={index} className="subject">
             <div 
