@@ -80,10 +80,10 @@ A compiler or interpreter then translates our recipe (code) into something the c
       <section className="note-section">
         <h3 style={{ textDecoration: "underline" }}>How Do Computers Store Data?</h3>
         <p>
-          Computers store data using electricity—either flowing (1) or not (0). These tiny on-off switches are called <b>bits</b>, the smallest unit of data.
+          Computers store data using electricity—either flowing (1) or not (0). These tiny on-off switches are called <b>bits</b>, the smallest unit of data/memory.
         </p>
         <p>
-          A single bit is like a grain of flour—not very useful on its own. But when we combine bits, we can store letters, numbers, and more—just like combining flour and eggs to make a cake!
+        8 bits = 1 byte. A single bit is like a grain of flour—not very useful on its own. But when we combine bits, we can store letters, numbers, and more—just like combining flour and eggs to make a cake!
         </p>
         <p>
           Example: The letter <b>A</b> in binary is <code>00000</code>, while <b>B</b> is <code>00001</code>.
@@ -95,16 +95,17 @@ A compiler or interpreter then translates our recipe (code) into something the c
         </ul>
         <h3 style={{ textDecoration: "underline" }}>Memory in Programs</h3>
         <p>
-          We use <b>variables</b> to store data in memory. A variable is a label for a memory location, like naming a container to store flour or eggs.
+          We use <b>variables</b> to store data in memory. Each variable occupies a specific amount of memory based on its data type
         </p>
+          <p><strong>Memory Addresses:</strong> Each variable is stored at a unique address in memory.</p>
       </section>
 
       <div className="navigation-buttons">
         <button onClick={() => navigate("/resources")} className="nav-button">
          Back to Resources
         </button>
-        <button onClick={() => navigate("/arrays")} className="nav-button">
-          Next Topic
+        <button onClick={() => navigate("/variables")} className="nav-button">
+          Next Topic - Variables
         </button>
       </div>
     </div>

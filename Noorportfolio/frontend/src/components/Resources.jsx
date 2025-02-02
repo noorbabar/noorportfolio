@@ -9,7 +9,7 @@ const Resources = () => {
       subject: "C Programming Fundamentals",
       notes: [
         { title: "Intro to C", link: "/intro-to-c" },
-        { title: "Arrays", link: "/arrays" },
+        { title: "Variables", link: "/variables" },
       ],
     },
     {
@@ -45,7 +45,7 @@ const Resources = () => {
     <div className="resources-container">
       <div className="sidebar">
         <h1 className="about-me-heading">RESOURCES</h1>
-        <h3> just some notes from a few courses i’ve taken, plus resources that might help other comp sci students :)</h3>
+        <h3> just some notes from a few courses i’ve taken,& resources that might help other comp sci students :)</h3>
         {resources.map((subject, index) => (
           <div key={index} className="subject">
             <div 
