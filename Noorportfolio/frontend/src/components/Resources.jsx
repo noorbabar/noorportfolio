@@ -11,6 +11,7 @@ const Resources = () => {
         { title: "Intro to C", link: "/intro-to-c" },
         { title: "Variables: Data Types", link: "/variables" },
         { title: "Control Flow: Statements", link: "/statements" },
+        { title: "Loops", link: "/loops" },
 
       ],
     },

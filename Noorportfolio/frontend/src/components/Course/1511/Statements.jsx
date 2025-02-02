@@ -216,8 +216,8 @@ if (has_flour && has_eggs && has_milk) {
         <button onClick={() => navigate("/resources")} className="nav-button">
           Back to Resources
         </button>
-        <button onClick={() => navigate("/statements")} className="nav-button">
-          Next Topic
+        <button onClick={() => navigate("/loops")} className="nav-button">
+          Next Topic - Loops
         </button>
       </div>
     </div>

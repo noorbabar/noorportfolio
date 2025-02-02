@@ -11,6 +11,7 @@ import Resources from "./components/Resources";
 import Variables from "./components/Course/1511/Variables";
 import IntroToC from "./components/Course/1511/IntroToC";
 import Statements from "./components/Course/1511/Statements";
+import Loops from "./components/Course/1511/Loops";
 
 import Problems from "./components/Course/LeetCode/Problems";
 
@@ -58,6 +59,7 @@ const App = () => {
               <Route path="/variables" element={<Variables />} /> 
               <Route path="/intro-to-c" element={<IntroToC />} />
               <Route path="/statements" element={<Statements />} />
+              <Route path="/loops" element={<Loops />} />
 
               <Route path="/problems" element={<Problems />} />  
               

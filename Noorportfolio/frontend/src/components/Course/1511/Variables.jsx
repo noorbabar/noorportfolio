@@ -217,7 +217,7 @@ const Variables = () => {
          Back to Resources
         </button>
         <button onClick={() => navigate("/statements")} className="nav-button">
-          Next Topic
+          Next Topic - Control Flow: Statements
         </button>
       </div>
       </div>
