@@ -134,6 +134,7 @@ const Variables = () => {
         <ul>
           <li>We can print variables to our terminal using `printf`.</li>
           <li>The format specifier (%) indicates where a value will be inserted in the format string.</li>
+          <li>Need to import #include "stdio.h" to use</li>
           <li>Example:
             <pre className="code-snippet">
               int my_age = 13; <br/>
@@ -163,6 +164,7 @@ const Variables = () => {
           <li>`scanf` reads user input in a formatted way.</li>
           <li>Uses the same format specifiers as `printf`.</li>
           <li>The `&` symbol tells `scanf` where to store the data.</li>
+          <li>Need to import #include "stdio.h" to use</li>
           <li>Example:
             <pre className="code-snippet">
               #include &lt;stdio.h&gt; <br/>
@@ -214,7 +216,7 @@ const Variables = () => {
       <button onClick={() => navigate("/resources")} className="nav-button">
          Back to Resources
         </button>
-        <button onClick={() => navigate("/resources")} className="nav-button">
+        <button onClick={() => navigate("/statements")} className="nav-button">
           Next Topic
         </button>
       </div>

@@ -9,7 +9,9 @@ const Resources = () => {
       subject: "C Programming Fundamentals",
       notes: [
         { title: "Intro to C", link: "/intro-to-c" },
-        { title: "Variables", link: "/variables" },
+        { title: "Variables: Data Types", link: "/variables" },
+        { title: "Control Flow: Statements", link: "/statements" },
+
       ],
     },
     {
