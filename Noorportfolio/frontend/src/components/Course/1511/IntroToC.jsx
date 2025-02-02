@@ -7,22 +7,41 @@ const IntroToC = () => {
   return (
     <div className="notes-container">
       <h1 style={{ textDecoration: "underline" }} className="notes-title">📖 Intro to C Programming</h1>
-
       <section className="note-section">
+        <h3> The only way to learn a new programming language is by writing programs in it.  </h3>
         <h3 style={{ textDecoration: "underline" }}>What is Programming?</h3>
         <p>
           Programming is giving a computer a set of instructions to solve a problem. 
         </p>
         <p> Just like we give cooking instructions like "Mix the flour and eggs," we use 
-          languages like C or Python to tell computers what to do step by step.</p>
+          languages like C to tell computers what to do step by step.</p>
         <p>
           Computers understand only machine code (binary: 0s and 1s), which is too complex 
           for humans to write directly. 
         </p>
         <p>Imagine baking a cake. You know you need flour and eggs, but you can’t just say, “Hey oven, make me a cake.” You need a detailed recipe with exact measurements and steps. Similarly, we use programming languages to write clear instructions for the computer.
-A compiler or interpreter then translates our recipe (code) into something the computer can follow, just like a baker turns ingredients into a cake.  Programming languages act as a bridge—clear enough for humans to write, yet precise enough for computers to execute.
+A compiler or interpreter then translates our recipe (code) into something the computer can follow, just like a baker turns ingredients into a cake. 
 </p>
-      </section>
+</section>
+
+<section className="note-section" style={{ color: "black", fontFamily: "'Trebuchet MS', sans-serif", textAlign: "left" }}>
+    <h3 style={{ textDecoration: "underline" }}>What is C?</h3>
+    <ul>
+        <li>C is a statically typed, low-level programming language.</li>
+        <li>It is known for its efficiency and direct memory manipulation.</li>
+        <li>Unlike Python or Java, C has direct access to memory and hardware.</li>
+        <li>Every instruction in C must end with a semicolon (<code>;</code>). If you forget it, the compiler will throw an error.</li>
+        <li>C is case-sensitive (<code>word ≠ Word ≠ WORD</code>).</li>
+        <li>Comments can be:
+            <ul>
+                <li>Single-line: <code>// This is a comment</code></li>
+                <li>Multi-line: <code>/* This is a multi-line comment */</code></li>
+            </ul>
+        </li>
+        <li>C has built-in libraries that provide useful functions. You import them using <code>#include</code>.</li>
+    </ul>
+</section>
+
 
       <section className="note-section">
         <h3 style={{ textDecoration: "underline" }}>How Programs Run - Operating System</h3>
@@ -60,7 +79,7 @@ A compiler or interpreter then translates our recipe (code) into something the c
         <ul>
           <li>
             <pre className="code-snippet">#include &lt;stdio.h&gt;</pre>
-            <span className="code-description">Includes the standard input/output library.</span>
+            <span className="code-description">tells the compiler to include information about the standard input/output library;</span>
           </li>
           <li>
             <pre className="code-snippet">int main(void) {"{ ... }"}</pre>
@@ -68,7 +87,9 @@ A compiler or interpreter then translates our recipe (code) into something the c
           </li>
           <li>
             <pre className="code-snippet">printf("Hello world!");</pre>
-            <span className="code-description">Prints text to the terminal.</span>
+            <span className="code-description"> A function is called by naming it, followed by a parenthesised list of arguments, so this calls
+            the function printf with the argument "hello, world\n". printf is a library function that
+            prints text to the terminal. in this case the string of characters between the quotes. </span>
           </li>
           <li>
             <pre className="code-snippet">return 0;</pre>

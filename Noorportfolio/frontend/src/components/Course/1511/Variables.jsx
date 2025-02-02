@@ -11,7 +11,7 @@ const Variables = () => {
       <section className="note-section">
         <h3 style={{ textDecoration: "underline" }}>What is a Variable?</h3>
         <p>
-        A Variable is a label for a memory location, like naming a container to store flour or eggs. We can change it's value.
+        A Variable is a label for a memory location, like naming a container to store flour or eggs. 
         </p>
       </section>
 
@@ -101,6 +101,7 @@ const Variables = () => {
       <section className="note-section">
         <h3 style={{ textDecoration: "underline" }}>Constants</h3>
         <p>Constants are fixed values that cannot be changed after being defined.</p>
+        <p>Constants use UPPERCASE naming conventions.</p>
         <ul>
           <li>
             <pre className="code-snippet">#define PI 3.1415</pre>
@@ -113,6 +114,89 @@ const Variables = () => {
           <p>Constants improve efficiency and prevent accidental changes to values.</p>
         </ul>
       </section>
+
+    <div className="note-section text-black font-trebuchet">
+    <section className="note-section" style={{ color: "black", fontFamily: "'Trebuchet MS', sans-serif", textAlign: "left" }}>
+        <h3 className="underline">Printing Variables using printf</h3>
+        <ul>
+          <li>We can print variables to our terminal using `printf`.</li>
+          <li>The format specifier (%) indicates where a value will be inserted in the format string.</li>
+          <li>Example:
+            <pre className="code-snippet">
+              int my_age = 13; <br/>
+              printf("I am %d years!", my_age);
+            </pre>
+          </li>
+          <li>Format specifiers:
+            <ul>
+              <li>%c for characters</li>
+              <li>%d for integers (decimal integer)</li>
+              <li>%lf for doubles (long floating point number)</li>
+            </ul>
+          </li>
+          <li>Example with multiple variables:
+            <pre className="code-snippet">
+              int diameter = 5; <br/>
+              double pi = 3.141; <br/>
+              printf("The diameter is %d, pi is %lf", diameter, pi);
+            </pre>
+          </li>
+        </ul>
+      </section>
+      
+      <section className="note-section" style={{ color: "black", fontFamily: "'Trebuchet MS', sans-serif", textAlign: "left" }}>
+        <h3 className="underline">Reading Input with scanf</h3>
+        <ul>
+          <li>`scanf` reads user input in a formatted way.</li>
+          <li>Uses the same format specifiers as `printf`.</li>
+          <li>The `&` symbol tells `scanf` where to store the data.</li>
+          <li>Example:
+            <pre className="code-snippet">
+              #include &lt;stdio.h&gt; <br/>
+              int input; <br/>
+              printf("Please enter your age: "); <br/>
+              scanf("%d", &input);
+            </pre>
+          </li>
+          <li>Ignoring whitespace in `char` input:
+            <pre className="code-snippet">
+              scanf(" %c", &character); // Ignores leading whitespace
+            </pre>
+          </li>
+        </ul>
+      </section>
+      
+      <section className="note-section" style={{ color: "black", fontFamily: "'Trebuchet MS', sans-serif", textAlign: "left" }}>
+        <h3 className="underline">Arithmetic Operations</h3>
+        <ul>
+          <li>Supported operations: `+`, `-`, `*`, `/`.</li>
+          <li>Use parentheses `()` to enforce precedence.</li>
+          <li>Example:
+            <pre className="code-snippet">
+              int age = 28; <br/>
+              int current_year = 2023; <br/>
+              int year_born = current_year - age; <br/>
+              printf("You were born in %d", year_born);
+            </pre>
+          </li>
+        </ul>
+      </section>
+      
+      <section className="note-section" style={{ color: "black", fontFamily: "'Trebuchet MS', sans-serif", textAlign: "left" }}>
+        <h3 className="underline">Character Arithmetic</h3>
+        <ul>
+          <li>Characters in C are treated as integers (ASCII values).</li>
+          <li>Example:
+            <pre className="code-snippet">
+              char letter = 'b'; <br/>
+              letter = letter + 1; <br/>
+              printf("%c\n", letter); // Prints 'c'
+            </pre>
+          </li>
+        </ul>
+      </section>
+    </div>
+
       <div className="navigation-buttons">
       <button onClick={() => navigate("/resources")} className="nav-button">
          Back to Resources
