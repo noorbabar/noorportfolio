@@ -203,8 +203,8 @@ const Loops = () => {
         <button onClick={() => navigate("/resources")} className="nav-button">
           Back to Resources
         </button>
-        <button onClick={() => navigate("/loops")} className="nav-button">
-          Next Topic - Custom Data Types
+        <button onClick={() => navigate("/custom")} className="nav-button">
+          Next Topic - Custom Data Types: Structs & Enums
         </button>
       </div>
     </div>
