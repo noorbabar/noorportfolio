@@ -11,7 +11,7 @@ const Custom = () => {
       <section className="note-section" style={{ color: "black", fontFamily: "'Trebuchet MS', sans-serif", textAlign: "left" }}>
         <h3 className="underline">Custom Data Types: Structs & Enums</h3>
         <p>Structures (<code>struct</code>) allow you to group multiple variables of different types together.</p>
-        <p>Enumerations (<code>enums</code>) help define a set of fixed values.</p>
+        <p>Enumerations (<code>enums</code>) help define a set of fixed/named values For example: labeling exercises based on the muscle group they target. {"enum muscle_group { CHEST, BACK, LEGS, ARMS };"}</p>
         </section>
 
         <section className="note-section" style={{ color: "black", fontFamily: "'Trebuchet MS', sans-serif", textAlign: "left" }}>

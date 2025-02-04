@@ -150,7 +150,7 @@ const Loops = () => {
 
         <section className="note-section" style={{ color: "black", fontFamily: "'Trebuchet MS', sans-serif", textAlign: "left" }}>
         <h4>Nested Loops</h4>
-        <p>Sometimes, we need a loop inside another loop. For example, let’s say you want to print a grid:</p>
+        <p>A nested loop is a loop inside another loop. Think of nested loops like supersets at the gym—you do one exercise (outer loop) and immediately follow it with another (inner loop).For example, let’s say you want to print a grid:</p>
         <pre className="code-snippet">
           {`int rows = 5;`}
           <br />
