@@ -144,8 +144,8 @@ printf("Total cookies baked: %d", total_cookies);`}
           <button onClick={() => navigate("/resources")} className="nav-button">
             Back to Resources
           </button>
-          <button onClick={() => navigate("/functions")} className="nav-button">
-            Next Topic - Functions
+          <button onClick={() => navigate("/strings")} className="nav-button">
+            Next Topic - Strings
           </button>
         </div>
       </section>
