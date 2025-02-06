@@ -8,8 +8,14 @@ const Custom = () => {
       <h1 style={{ textDecoration: "underline" }} className="notes-title">📖 </h1>
 
       <section className="note-section" style={{ color: "black", fontFamily: "'Trebuchet MS', sans-serif", textAlign: "left" }}>
-        <h3 className="underline">The topic</h3>
-        <p>add info here and like dotpoints </p>
+        <h3 className="underline">C Programming Questions & Solutions</h3>
+        <p> The structure of the contents will be problem solving based:
+            <li>1. planning - understanding the question </li>
+            <li>2. visualising - diagramming our plan (for the visual learners) </li>
+            <li>3. getting to the solution - step by step </li>
+             </p>
+             
+             <h3> apologies this page is empty rn - i'm currently simplifying the concepts, and will add it here once done!</h3>
         <li></li>
 </section>
 
