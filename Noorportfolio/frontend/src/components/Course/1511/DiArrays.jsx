@@ -11,15 +11,18 @@ const DiArrays = () => {
       <section className="note-section" style={{ color: "black", fontFamily: "'Trebuchet MS', sans-serif", textAlign: "left" }}>
         <h3 className="underline">Understanding 2D Arrays</h3>
         <p>A 2D array is a collection of elements arranged in rows and columns, similar to a table or spreadsheet.</p>
-        
+        </section>
+
+        <section className="note-section" style={{ color: "black", fontFamily: "'Trebuchet MS', sans-serif", textAlign: "left" }}>
         <h3 className="underline">Why Use 2D Arrays?</h3>
     <ul>
         <li>They help store data in a grid-like format, making it easier to organise complex data (e.g., matrices or tables).</li>
         <li>They enable efficient access to data at specific row and column positions, ideal for applications like image processing or games.</li>
         <li>They allow us to model real-world problems that require multiple dimensions, like seating arrangements or spreadsheets.</li>
     </ul>
+</section>
 
-
+<section className="note-section" style={{ color: "black", fontFamily: "'Trebuchet MS', sans-serif", textAlign: "left" }}>
     <h3 className="underline">How to Declare a 2D Array</h3>
 <ul>
   <li>To declare a 2D array in C, you specify the number of rows and columns. Here's the syntax for declaring and initialising a 2D array:</li>
@@ -40,6 +43,9 @@ const DiArrays = () => {
   <li>Accessing or modifying elements in a 2D array: <code>matrix[1][2];</code> (Accesses value at row 1, column 2)</li>
   <li>Example of accessing and modifying an element: <code>matrix[2][3] = 15;</code> (Modifies the element at row 2, column 3 to 15)</li>
 </ul>
+</section>
+
+<section className="note-section" style={{ color: "black", fontFamily: "'Trebuchet MS', sans-serif", textAlign: "left" }}>
 
         <h3 className="underline">Visualisation of a 2D Array</h3>
         <p>Imagine a table where rows represent days, and columns represent exercises:</p>
@@ -63,6 +69,8 @@ const DiArrays = () => {
           </tbody>
         </table>
         <p>Each value is accessed using row and column indices, e.g., <code>gym_log[2][1]</code> refers to Day 2, Exercise 1.</p>
+</section>
+<section className="note-section" style={{ color: "black", fontFamily: "'Trebuchet MS', sans-serif", textAlign: "left" }}>
 
         <h3 className="underline">Example: Tracking Workout Progress</h3>
         <ul>
@@ -81,7 +89,8 @@ const DiArrays = () => {
           <li>Accessing a value (Wednesday, exercise 2): <code>gym_log[2][1]</code></li>
           <li>Updating Friday, exercise 3: <code>gym_log[4][2] = 80;</code></li>
         </ul>
-
+</section>
+<section className="note-section" style={{ color: "black", fontFamily: "'Trebuchet MS', sans-serif", textAlign: "left" }}>
         <h3 className="underline">Looping Through a 2D Array</h3>
         <p>A nested loop is used to iterate through each row and column:</p>
         <pre className="code-snippet">
@@ -98,14 +107,7 @@ const DiArrays = () => {
           <li>The inner loop (<code>j</code>) iterates through each exercise for that day.</li>
           <li>It prints all values in a row before moving to the next row.</li>
         </ul>
-
-        <h3 className="underline">Key Takeaways</h3>
-        <ul>
-          <li>2D arrays are useful for storing structured data like workouts or seating plans.</li>
-          <li>Each element is accessed using two indices: row and column.</li>
-          <li>Nested loops help iterate over all elements.</li>
-        </ul>
-      </section>
+</section>
 
       <div className="navigation-buttons">
         <button onClick={() => navigate("/resources")} className="nav-button">
