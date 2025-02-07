@@ -71,7 +71,8 @@ const About = () => {
   return (
     <section>
       <h1 className="about-me-heading">ABOUT ME</h1>
-      <p>Hi! I'm Noor, a Second Year Computer Science Student at UNSW.</p>
+      <p>Hey! I'm Noor, a passionate security engineering student at UNSW with a love for
+            full-stack development and cybersecurity.</p>
       <p>
         <small>
           a <em>beginner, actively progressing and learning...</em>
