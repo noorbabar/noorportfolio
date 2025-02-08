@@ -71,7 +71,7 @@ const About = () => {
   return (
     <section>
       <h1 className="about-me-heading">ABOUT ME</h1>
-      <p>Hey! I'm Noor, a passionate security engineering student at UNSW with a love for
+      <p>Hey! I'm Noor, a passionate second year computer science student at UNSW with a love for
             full-stack development and cybersecurity.</p>
       <p>
         <small>
@@ -80,10 +80,7 @@ const About = () => {
       </p>
 
       <p>
-        I'm currently majoring in Security Engineering, aspiring to
-        become a Cybersecurity/Software Engineer, Analyst or Penetration Tester who
-        safeguards the digital world. My passion lies in programming and creating innovative solutions that
-        prioritise security and functionality. I’m driven by problem-solving and
+        I'm aspiring to become a Cybersecurity/Software Engineer, Analyst or Penetration Tester. I’m driven by problem-solving and
         constantly explore ways to grow as both a learner and a creator.
       </p>
       <p>
