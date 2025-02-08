@@ -710,20 +710,30 @@ body.dark-mode
   background: #6f90c0;
 }
 
-/* note this specific css section, i got this from Uiverse.io by mayurd8862 its not coded from my brain */ 
+/* note this specific css section, i got this from Uiverse.io by mayurd8862 its not coded from my brain - tho i made some modifications */ 
 .card {
   position: relative;
-  width: 800px;
+  width: 90%;
+  max-width: 800px; 
   height: 120px;
   background-image: radial-gradient(#eddebc, #ff9fba);
-  display:inline-flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   font-size: 25px;
   font-weight: bold;
   border-radius: 15px;
   cursor: pointer;
+  text-align: center;
 }
+
+@media (max-width: 300px) {
+  .card {
+    width: 95%; 
+    font-size: 18px;
+  }
+}
+
 
 .card::before,
 .card::after {
