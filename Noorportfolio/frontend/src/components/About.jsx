@@ -114,11 +114,11 @@ const About = () => {
               </tr>
               <tr>
                 <td><strong> Best piece of Advice </strong></td>
-                <td>Comparison is the thief of joy, where focus goes, energy flows -- it's you vs you</td>
+                <td>Comparison is the thief of joy -- it's you vs you.</td>
               </tr>
               <tr>
                 <td><strong> Fun Fact</strong></td>
-                <td>I love Kdramas, Bubble Tea ( & i can RDL 1.5x my body weight)</td>
+                <td>I love Kdramas, Bubble Tea & Romanian DeadLifts </td>
               </tr>
               <tr>
                 <td><strong>Interests</strong></td>
