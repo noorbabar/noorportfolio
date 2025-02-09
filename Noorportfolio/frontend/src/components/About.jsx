@@ -11,7 +11,7 @@ const About = () => {
 
   useEffect(() => {
     const interestsList = [
-      "Gym", "Lifting", "Watching the sunrise","Badmington",
+      "Gym", "Lifting", "Watching the sunrise","Badminton",
       "Hanging out w my friends", "Baking", "Traveling",
       "Taking naps","Chess", "Walking my cat"
     ];
@@ -60,18 +60,17 @@ const About = () => {
   };
 
   const catMedia = [
-    { type: "image", src: "/cat1.jpg", alt: " playing" },
-    { type: "image", src: "/cat2.jpg", alt: " napping" },
-    { type: "image", src: "/cat3.jpg", alt: " looking curious" },
-    { type: "video", src: "/cat4.mp4", alt: "playin", autoplay: true },
-    { type: "video", src: "/cat5.mov", alt: "playin", autoplay: true },
-
+    { type: "image", src: "/cat1.jpg", alt: "Milo playing with a toy" },
+    { type: "image", src: "/cat2.jpg", alt: "Milo napping peacefully" },
+    { type: "image", src: "/cat3.jpg", alt: "Milo looking curious" },
+    { type: "video", src: "/cat4.mp4", alt: "Milo playing", autoplay: true },
+    { type: "video", src: "/cat5.mov", alt: "Milo exploring", autoplay: true },
   ];
 
   return (
     <section>
       <h1 className="about-me-heading">ABOUT ME</h1>
-      <div class="card"> I'm Noor</div>
+      <div className="card"> I'm Noor</div>
 
       <p> A passionate second year computer science student at UNSW with a love for
             full-stack development and cybersecurity.</p>
@@ -89,18 +88,19 @@ const About = () => {
         Feel free to check out the sections above — Projects, Resources,
         Articles --
       </p>
+
       <div className="fun-facts-toggle">
         <button
           onClick={() => setShowFunFacts(!showFunFacts)}
           className="toggle-button"
         >
-          {showFunFacts ? "nvm i don't want to see this" : "SHOW FUN FACTS ABOUT NOOR"}
+          {showFunFacts ? "HIDE FUN FACTS" : "SHOW FUN FACTS"}
         </button>
       </div>
 
       {showFunFacts && (
         <div className="fun-facts-section">
-        <h1 className="about-me-heading">FUN FACTS</h1>
+          <h1 className="about-me-heading">FUN FACTS</h1>
           <table>
             <tbody>
               <tr>

@@ -70,10 +70,11 @@ body {
     background-color: #f3c1ca;
     color: #ffffff;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 18px;
+    border-radius: 15px;
     cursor: pointer;
     font-size: 16px;
+    font-weight: 700;
     transition: background-color 0.3s ease;
   }
 
@@ -83,8 +84,7 @@ body {
 }
   
 .toggle-button:hover {
-  background-color: #f1cabc;
-  background-color: #f1cabc;
+  background-color: #f4c6cd;
   }
   
 body.dark-mode .toggle-button:hover {
@@ -94,7 +94,7 @@ body.dark-mode .toggle-button:hover {
 
 .fun-facts-section {
     margin-top: 15px;
-    padding: 10px;
+    padding: 1px;
     box-shadow: 0 5px 15px rgb(255, 140, 163);
   }
   
@@ -154,17 +154,17 @@ table {
   font-family: Trebuchet MS;
   width: 80%;
   color: #000;
-  background-color: rgb(252, 230, 238);
+  background-color: rgb(252, 209, 225);
   margin: 20px auto;
-  border-radius: 10px;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.883);
+  box-shadow: 0 0 10px rgb(254, 238, 201);
 }
 
 table td,
 table th {
-  border: 1px solid #f9f6f8;
-  padding: 10px;
+  border: 1px solid #ecc6df;
+  padding: 12px;
   text-align: center;
 }
 
@@ -178,40 +178,9 @@ td {
   margin-right: 10px;
 }
 
-.hobbies {
-  cursor: pointer;
-  transition: transform 0.2s;
-  margin: 20px;
-  padding: 10px;
-  border-radius: 10px;
-  background: #f9e9b9;
-  font-size: 24px;
-  color: #000;
-  text-align: center;
-}
-
-.hobbies:hover {
-  transform: scale(1.05);
-}
-
 .color-change {
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
-}
-
-.color-change:hover {
-  background-color: #f5c0e3;
-  color: #ffffff;
-}
-
-.social-links {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-}
-
-.social-icon img {
-  display: block;
 }
 
 /* this is the main title that bounces up n down CSS structure */
@@ -710,8 +679,7 @@ body.dark-mode
   background: #6f90c0;
 }
 
-/* note this specific css section, i got this from Uiverse.io by mayurd8862 its not coded from my brain - tho i made some modifications */ 
-.card {
+.card { /* from Uiverse.io by mayurd8862 -  THIS section only is not coded from my brain */
   position: relative;
   width: 90%;
   max-width: 800px; 
@@ -747,7 +715,7 @@ body.dark-mode
   font-size: 25px;
   font-weight: bold;
   color: rgb(233, 188, 215);
-  background-color: #f18ca8;
+  background-color: #fefefe;
   transition: all 0.5s;
 }
 
@@ -805,4 +773,37 @@ body.dark-mode .card::before,
 
 .card:hover:after {
   content: "HELLO";
+}
+
+/* Social Links */
+.social-links {
+  margin-top: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-links a {
+  margin: 10px;
+  font-size: 1.1rem; 
+  color: #141313;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 50px; 
+  background-color: #f1f1f1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+}
+
+.social-links a:hover {
+  color: #fff;
+  background-color: #313337;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.social-links a:active {
+  transform: translateY(1px); 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
 }

@@ -59,7 +59,6 @@ const App = () => {
               <Link to="/articles" className="button-heading">ARTICLES</Link>
             </nav>
           </header>
-
           <main>
             <Routes>
               <Route path="/" element={<About />} />
@@ -88,6 +87,19 @@ const App = () => {
               
             </Routes>
           </main>
+
+      {/* Social Links */}
+      <div className="social-links">
+  <a href="https://github.com/noorbabar" target="_blank" rel="noopener noreferrer">
+    <i className="fab fa-github"></i> GitHub
+  </a>
+  <a href="https://linkedin.com/in/noorbabar" target="_blank" rel="noopener noreferrer">
+    <i className="fab fa-linkedin"></i> LinkedIn
+  </a>
+  <a href="mailto:nbabar233@gmail.com">
+    <i className="fas fa-envelope"></i> Email
+  </a>
+</div>
     </div>
   );
 };
