@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import { FaMoon, FaSun } from 'react-icons/fa'; 
+import Switch from "./components/Switch"; 
 
 import About from "./components/About";
 import Projects from "./components/Projects";
@@ -41,15 +42,7 @@ const App = () => {
   return (
     <div className={darkMode ? "dark-mode" : ""}>
           <header>
-          <button
-          id="darkModeToggle"
-          className="dark-mode-toggle"
-          onClick={() => setDarkMode(!darkMode)}
-          >
-           {darkMode ? <FaSun /> : <FaMoon />}
-          </button>
-
-  
+          <Switch darkMode={darkMode} setDarkMode={setDarkMode} />
 
             <div className="gradient radial">NOOR'S PORTFOLIO</div>
             <nav>
@@ -100,6 +93,7 @@ const App = () => {
     <i className="fas fa-envelope"></i> Email
   </a>
 </div>
+
     </div>
   );
 };
