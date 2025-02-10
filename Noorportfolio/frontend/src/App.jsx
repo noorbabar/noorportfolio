@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import "./App.css";
-import { FaMoon, FaSun } from 'react-icons/fa'; 
 import Switch from "./components/Switch"; 
 
 import About from "./components/About";
@@ -28,6 +27,31 @@ import Code from "./components/Course/1511/Code";
 // files for Leetcode
 import Problems from "./components/Course/LeetCode/Problems";
 
+const TypingText = ({ text, speed = 200 }) => {
+  const [displayText, setDisplayText] = useState("");
+
+  useEffect(() => {
+    let index = 0;
+    setDisplayText(""); 
+
+    const interval = setInterval(() => {
+      setDisplayText((prev) => {
+        if (index < text.length) {
+          return text.substring(0, index + 1); 
+        } else {
+          clearInterval(interval);
+          return prev;
+        }
+      });
+      index++;
+    }, speed);
+
+    return () => clearInterval(interval);
+  }, [text, speed]);
+
+  return <div className="gradient radial">{displayText}</div>;
+};
+
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
 
@@ -44,7 +68,7 @@ const App = () => {
           <header>
           <Switch darkMode={darkMode} setDarkMode={setDarkMode} />
 
-            <div className="gradient radial">NOOR'S PORTFOLIO</div>
+           <TypingText text={"NOOR'S PORTFOLIO"} speed={200} />
             <nav>
               <Link to="/" className="button-heading">ABOUT ME</Link>
               <Link to="/projects" className="button-heading">PROJECTS</Link>
