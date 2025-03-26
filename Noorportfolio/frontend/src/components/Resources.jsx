@@ -57,7 +57,7 @@ const Resources = () => {
     <div className="resources-container">
       <div className="sidebar">
         <h1 className="about-me-heading">RESOURCES</h1>
-        <h3> these are some of my notes & resources that might help other comp sci students :)</h3>
+        <h3> these are a compilation of my notes & resources :)</h3>
         {resources.map((subject, index) => (
           <div key={index} className="subject">
             <div 

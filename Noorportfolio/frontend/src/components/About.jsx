@@ -72,8 +72,8 @@ const About = () => {
       <h1 className="about-me-heading">ABOUT ME</h1>
       <div className="card"> I'm Noor</div>
 
-      <p> A passionate second year computer science student at UNSW with a love for
-            full-stack development and cybersecurity.</p>
+      <p> A passionate second year computer science student majoring in Security Engineering at UNSW, with a love for
+            full-stack development and Cybersecurity.</p>
       <p>
         <small>
           a <em>beginner, actively progressing and learning...</em>
@@ -81,7 +81,7 @@ const About = () => {
       </p>
 
       <p>
-        I'm aspiring to become a Cybersecurity/Software Engineer, Analyst or Penetration Tester. I’m driven by problem-solving and
+        I'm aspiring to become a Software / Security Engineer, Analyst or Penetration Tester. I’m driven by problem-solving and
         constantly explore ways to grow as both a learner and a creator.
       </p>
       <p>
@@ -105,7 +105,7 @@ const About = () => {
             <tbody>
               <tr>
                 <td><strong>Age</strong></td>
-                <td>19</td>
+                <td>20</td>
               </tr>
               <tr>
                 <td><strong>Favourite Quote</strong></td>
@@ -114,10 +114,6 @@ const About = () => {
               <tr>
                 <td><strong> Best piece of Advice </strong></td>
                 <td>Comparison is the thief of joy -- it's you vs you.</td>
-              </tr>
-              <tr>
-                <td><strong> Fun Fact</strong></td>
-                <td>I love Kdramas, Bubble Tea & Romanian DeadLifts </td>
               </tr>
               <tr>
                 <td><strong>Interests</strong></td>

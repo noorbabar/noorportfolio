@@ -15,7 +15,7 @@ const Custom = () => {
             <li>3. getting to the solution - step by step </li>
              </p>
              
-             <h3> apologies this page is empty rn - i'm currently simplifying the concepts, and will add it here once done!</h3>
+             <h3> I'm currently simplifying the concepts, and will add it here once done!</h3>
         <li></li>
 </section>
 
