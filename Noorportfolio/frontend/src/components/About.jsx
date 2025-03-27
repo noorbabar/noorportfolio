@@ -4,6 +4,7 @@ import "../App.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+
 const About = () => {
   const [interests, setInterests] = useState("Watching K-Dramas");
   const [movies, setMovies] = useState("Maze Runner");
@@ -39,6 +40,8 @@ const About = () => {
       clearInterval(moviesInterval);
     };
   }, []);
+  
+  
 
   const sliderSettings = {
     dots: true,
@@ -59,6 +62,7 @@ const About = () => {
     ],
   };
 
+
   const catMedia = [
     { type: "image", src: "/cat1.jpg", alt: "Milo playing with a toy" },
     { type: "image", src: "/cat2.jpg", alt: "Milo napping peacefully" },
@@ -72,6 +76,7 @@ const About = () => {
       <h1 className="about-me-heading">ABOUT ME</h1>
       <div className="card"> I'm Noor</div>
 
+  
       <p> A passionate second year computer science student majoring in Security Engineering at UNSW, with a love for
             full-stack development and Cybersecurity.</p>
       <p>
