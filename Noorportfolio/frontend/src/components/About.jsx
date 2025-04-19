@@ -73,10 +73,10 @@ const About = () => {
 
   return (
     <section>
+     <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
       <h1 className="about-me-heading">ABOUT ME</h1>
-      <div className="card"> I'm Noor</div>
-
-  
+      <div className="card">I'm Noor</div>
+    </div>
       <p> A passionate second year computer science student majoring in Security Engineering at UNSW, with a love for
             full-stack development and Cybersecurity.</p>
       <p>
