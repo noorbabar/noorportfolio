@@ -1,5 +1,6 @@
 import React from "react";
 import "../App.css"; 
+import '../style/articles.css'; 
 
 const articles = [
 

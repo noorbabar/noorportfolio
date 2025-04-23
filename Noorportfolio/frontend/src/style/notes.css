@@ -1,0 +1,163 @@
+/* Enhanced Notes Container */
+.notes-container {
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 900px;
+    margin: 40px auto; 
+    font-family: 'Poppins', 'Courier New', monospace;
+    box-shadow: 5px 15px 30px var(--shadow-color);
+    line-height: 1.8;
+    background-color: rgba(255, 255, 255, 0.03);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .notes-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+  }
+  
+  .notes-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-text);
+    position: relative;
+    display: inline-block;
+  }
+  
+  .notes-title::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+  
+  .note-section {
+    background: rgba(220, 198, 181, 0.442);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--gradient-end);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .note-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  body.dark-mode .note-section {
+    background: rgba(146, 158, 191, 0.938);
+  }
+  
+  /* Code Block Styling */
+  .code-block, .code-snippet {
+    background-color: #f8f8f8;
+    padding: 20px;
+    font-family: "Courier New", monospace;
+    font-size: 16px;
+    border-radius: 10px;
+    white-space: pre-wrap; 
+    word-wrap: break-word;
+    line-height: 1.6;
+    color: #333;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid var(--gradient-end);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .code-block:hover, .code-snippet:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .code-description {
+    color: #080101;
+    font-size: 14px;
+    font-style: italic;
+    display: block;
+    margin-top: 10px;
+    padding: 8px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+  }
+  
+  body.dark-mode .code-block, body.dark-mode .code-snippet {
+    background-color: #2d2d2d;
+    color: #f0f0f0;
+    border-left: 4px solid var(--gradient-start);
+  }
+  
+  body.dark-mode .code-description {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #e0e0e0;
+  }
+  
+  /* Terminal Commands Styling */
+  .terminal-commands {
+    background: #1e1e1e;
+    color: #f8f8f2;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-family: monospace;
+    list-style-type: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .terminal-commands::before {
+    content: "● ● ●";
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    font-size: 12px;
+    color: #999;
+    letter-spacing: 5px;
+  }
+  
+  .terminal-commands li {
+    margin: 8px 0;
+    position: relative;
+    padding-left: 15px;
+    line-height: 1.6;
+  }
+  
+  .terminal-commands li::before {
+    content: "$";
+    position: absolute;
+    left: 0;
+    color: var(--gradient-end);
+    font-weight: bold;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .notes-container {
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .notes-container {
+      padding: 15px;
+    }
+    
+    .note-section {
+      padding: 15px;
+    }
+  }
