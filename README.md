@@ -1,6 +1,4 @@
 # Welcome to My Portfolio Website!  
-[<noorsportfolio.vercel.app>](<noorsportfolio.vercel.app>)
-
 ---
 
 ### About This Portfolio
