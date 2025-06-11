@@ -587,3 +587,70 @@ body.dark-mode .animated-background {
     font-size: 14px;
   }
 }
+/* Additions to Existing Styles */
+
+/* Fancy Glow Button */
+.button-heading {
+    background-image: linear-gradient(135deg, var(--button-gradient-start), var(--button-gradient-end));
+    box-shadow: 0 4px 20px rgba(255, 105, 180, 0.3), 0 0 10px rgba(255, 105, 180, 0.2);
+    border: none;
+    backdrop-filter: blur(4px);
+  }
+  
+  .button-heading:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(255, 105, 180, 0.45), 0 0 15px rgba(255, 105, 180, 0.3);
+  }
+  
+  /* Glass Effect for Cards */
+  .card-glass {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 700px;
+    color: var(--primary-text);
+  }
+  
+  /* Animate Headings */
+  h1 {
+    animation: popIn 0.8s ease-out;
+  }
+  
+  /* Smooth Scroll for better UX */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Glowing Border on Dark Mode Toggle */
+  .dark-mode-toggle {
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+  
+  body.dark-mode .dark-mode-toggle {
+    border: 2px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Cool Animated Shine */
+  @keyframes shine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+  
+  /* Pop In Animation */
+  @keyframes popIn {
+    0% {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  

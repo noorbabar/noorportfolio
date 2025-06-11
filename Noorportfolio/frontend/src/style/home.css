@@ -1,26 +1,37 @@
-/* Enhanced Gradient Banner */
 .gradient {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 2rem auto;
-    max-height: 180px;
     height: 180px;
-    width: 80%;  
+    width: 85%;
     max-width: 1200px;
-    border-radius: 15px;
-    background-image: radial-gradient(var(--gradient-start), var(--gradient-end));
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2),
-                0 0 15px hsla(0, 0%, 0%, 0.3);
-    color: #fffdfd;
-    font-size: 2.8rem;
-    font-weight: 700;
+    border-radius: 20px;
+    background-image: radial-gradient(circle at 30% 30%, var(--gradient-start), var(--gradient-end));
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25),
+                inset 0 0 20px rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 800;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     position: relative;
     overflow: hidden;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    letter-spacing: 1px;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.35);
+    letter-spacing: 1.2px;
+    backdrop-filter: blur(4px);
+    animation: floatIn 1.6s ease-out;
+  }
+  
+  @keyframes floatIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px) scale(0.98);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
   }
   
   .gradient::before {
@@ -30,53 +41,60 @@
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 60%);
-    transform: rotate(30deg);
-    animation: shimmer 8s infinite linear;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 60%);
+    transform: rotate(45deg);
+    animation: shimmer 6s infinite linear;
     pointer-events: none;
+    opacity: 0.6;
+    filter: blur(4px);
   }
-  
-  /* Enhanced About Me Heading Animation */
   .about-me-heading {
     font-family: 'Poppins', 'Trebuchet MS', sans-serif;
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-size: 2.8rem;
+    font-weight: 900;
     text-align: center;
-    color: #fff;
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
-    -webkit-background-clip: text;
+    background: linear-gradient( #fc85cd, #fbc2ec);
+    background-size: 200% auto;
+    color: pink;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    animation: bounce 3s infinite, colorShift 8s infinite alternate;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: pink;
+    animation: neonShift 6s ease infinite, pulseGlow 3s infinite ease-in-out;
     position: relative;
+    padding: 12px 30px;
+    margin: 30px auto;
     display: inline-block;
-    padding: 10px 20px;
-    margin: 20px 0;
+    text-shadow: 0 0 6px rgb(44, 7, 7);
   }
   
-  @keyframes colorShift {
-    0% { background: linear-gradient(135deg, #ff7e5f, #feb47b); -webkit-background-clip: text; }
-    50% { background: linear-gradient(135deg, #e26297, #f9e9b9); -webkit-background-clip: text; }
-    100% { background: linear-gradient(135deg, #feb47b, #ff7e5f); -webkit-background-clip: text; }
-  }
-  
-  @keyframes bounce {
-    0%, 100% {
-      transform: translateY(0);
+  @keyframes neonShift {
+    0% {
+      background-position: 0% center;
     }
     50% {
-      transform: translateY(-15px);
+      background-position: 100% center;
+    }
+    100% {
+      background-position: 0% center;
+    }
+  }
+  
+  @keyframes pulseGlow {
+    0%, 100% {
+      text-shadow: 0 0 6px rgba(255, 255, 255, 0.25), 0 0 20px rgba(255, 110, 196, 0.25);
+    }
+    50% {
+      text-shadow: 0 0 12px rgba(255, 255, 255, 0.4), 0 0 35px rgba(120, 115, 245, 0.4);
     }
   }
   
   .about-me-heading:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 30px rgba(74, 222, 222, 0.4);
     animation-play-state: paused;
-    transform: translateY(-8px) scale(1.05);
-    text-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
   }
   
-  /* Enhanced Card Animation */
   .card {
     position: relative;
     width: 90%;
@@ -147,7 +165,6 @@
     letter-spacing: 2px;
   }
   
-  /* Enhanced Media Container */
   .media-container {
     padding: 15px;
     display: flex;
@@ -186,7 +203,6 @@
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
   }
   
-  /* Enhanced Table Styling */
   table {
     border-collapse: collapse;
     font-family: 'Poppins', 'Trebuchet MS', sans-serif;
@@ -235,7 +251,6 @@
     font-size: 0.9rem;
   }
   
-  /* Enhanced Social Links */
   .social-links {
     margin-top: 60px;
     margin-bottom: 40px;
@@ -386,7 +401,6 @@
     }
   }
   
-  /* Gradient effects */
   .gradient::after {
     content: '';
     position: absolute;
@@ -400,7 +414,6 @@
       radial-gradient(circle at 90% 90%, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 40%);
   }
   
-  /* Responsive styles for home components */
   @media (max-width: 768px) {
     .gradient {
       width: 95%;
@@ -457,3 +470,20 @@
       font-size: 18px;
     }
   }
+
+  .gradient-button {
+    background: linear-gradient(90deg, #f9d4e5, #ecced9);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    box-shadow: 0 4px 14px rgba(229, 46, 113, 0.3);
+  }
+  
+  .gradient-button:hover {
+    transform: scale(1.05);
+  }
+  
