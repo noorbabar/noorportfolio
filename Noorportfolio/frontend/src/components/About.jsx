@@ -71,9 +71,9 @@ const About = () => {
         transition={{ duration: 0.6 }}
       >
         <h1 className="about-me-heading">ABOUT ME</h1>
-        <p className="intro-line">Hi, I’m <strong>Noor</strong> — a passionate <span>Computer Science student</span> at UNSW majoring in Security Engineering.</p>
-        <p> I love everything about the field of Cybersecurity. Big fan of solving problems & building cool things!</p>
-        <p> I aim to become a Penetration Tester or Cyber Security Analyst!</p>
+        <p className="intro-line">Hi, I’m <strong>Noor</strong>, a passionate <span>Computer Science student</span> at UNSW majoring in Security Engineering.</p>
+        <p> Big fan of solving problems, building cool things & making an impact!</p>
+        <p> I aim to become a Penetration Tester, Cyber Security Analyst or Consultant!</p>
         <p><small><em>Always learning. Always building.</em></small></p>
         <p>Check out my <strong>Projects</strong>, <strong>Resources</strong>, or <strong>Articles</strong> to learn more!</p>
       </motion.div>
@@ -100,14 +100,14 @@ const About = () => {
           <table className="fun-table">
             <tbody>
               <tr><td><strong>Age:</strong></td><td>20</td></tr>
-              <tr><td><strong>Quote:</strong></td><td>"When you set your mind to something, you’ll always find a way to make it work." — Imam Ghazali</td></tr>
+              <tr><td><strong>Fav Quote:</strong></td><td>"When you set your mind to something, you’ll always find a way to make it work." — Imam Ghazali</td></tr>
               <tr><td><strong>Best Advice:</strong></td><td>"If you only do what you can do, you'll never be more than you are now. The only true limit is the one you set for yourself" - Shifu </td></tr>
-              <tr><td><strong>Current Interest:</strong></td><td><span className="highlight">{interests}</span></td></tr>
+              <tr><td><strong>Current Interests:</strong></td><td><span className="highlight">{interests}</span></td></tr>
               <tr><td><strong> Fav Movie/Show:</strong></td><td><span className="highlight">{movies}</span></td></tr>
             </tbody>
           </table>
 
-          <h1 className="about-me-heading">🐾 Meet my best friend, MILO!</h1>
+          <h1 className="about-me-heading">🐾 Meet MILO!</h1>
           <Slider {...sliderSettings}>
             {catMedia.map((item, index) => (
               <div key={index} className="media-container">

@@ -5,9 +5,9 @@ import '../style/articles.css';
 const articles = [
 
   {
-    title: "How to get started on LeetCode",
-    date: "29th January 2025",
-    content: "Ever heard of LeetCode but felt too intimidated to try? You’re not alone.When I first opened LeetCode, I felt completely lost—hundreds of problems, different difficulty levels, and no idea where to start. But as I stuck with it, I realised it wasn’t just about coding interviews; it was about sharpening problem-solving skills, learning to break down complex problems, and writing efficient code. Here’s how I got started, and how you can too! ",
+    title: "will add in my blogs",
+    date: "once i have time",
+    content: "coming soon",
     link: "#",
   },
 
