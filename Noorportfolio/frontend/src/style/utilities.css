@@ -7,16 +7,12 @@
 :root {
   --primary-bg: rgb(245, 231, 215);
   --primary-text: rgba(0, 0, 0, 0.904);
-  --accent-pink: #ff9fba;
-  --accent-peach: #f9e9b9;
-  --gradient-start: #f9e9b9;
-  --gradient-end: #e26297;
-  --button-gradient-start: #ff8edd;
-  --button-gradient-end: #ffcf9f;
+  --gradient-start: #dfa1bb;
+  --gradient-end: #dfa1bb;
+  --button-gradient-start: #fbddbc;
+  --button-gradient-end: #fbddbc;
   --card-bg: rgba(5, 1, 236, 0.05);
   --shadow-color: rgba(223, 140, 94, 0.95);
-  --toggle-bg: #efb6cd;
-  --toggle-active: #a4c9ed;
 }
 
 /* Dark mode variables */
@@ -30,12 +26,9 @@
   --button-gradient-start: #010312ae;
   --button-gradient-end: #211993a6;
   --card-bg: #6d76a2;
-  --shadow-color: rgba(17, 39, 234, 0.575);
   --toggle-bg: #333;
-  --toggle-active: #a4c9ed;
 }
 
-/* Base Styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -57,7 +50,6 @@ body {
   line-height: 1.6;
 }
 
-/* Typography */
 h1 {
   color: var(--primary-text);
   font-size: 2.2rem;
@@ -99,7 +91,6 @@ p {
   margin-bottom: 1rem;
 }
 
-/* Buttons & Controls */
 .button-heading {
   display: inline-block;
   padding: 12px 30px;
@@ -141,7 +132,6 @@ p {
   animation: shine 1.5s ease-out;
 }
 
-/* Dark Mode Toggle */
 .dark-mode-toggle {
   position: fixed;
   top: 20px;
@@ -163,12 +153,12 @@ p {
 }
 
 .dark-mode-toggle::before {
-  content: "🌙";
+  content: "m";
   font-size: 16px;
 }
 
 body.dark-mode .dark-mode-toggle::before {
-  content: "☀️";
+  content: "";
 }
 
 .dark-mode-toggle:hover {

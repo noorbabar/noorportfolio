@@ -16,7 +16,7 @@ const articles = [
 const Articles = () => {
   return (
     <div className="articles-page">
-      <h1 className="about-me-heading">ARTICLES</h1>
+      <h1 className="about-me-heading">BLOGS</h1>
       <div className="articles-list">
         {articles.map((article, index) => (
           <div key={index} className="article-card">
