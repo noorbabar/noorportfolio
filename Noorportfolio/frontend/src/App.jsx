@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, useLocation } from "react-router-dom";
 import "./App.css";
 import Switch from "./components/Switch";
 
@@ -7,32 +7,10 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Blog from "./components/Blog";
 import Resources from "./components/Resources";
-import Loader from "./components/Loading";
-
-const TypingText = ({ text, speed = 100 }) => {
-  const [displayText, setDisplayText] = useState("");
-
-  useEffect(() => {
-    let index = 0;
-    setDisplayText("");
-
-    const interval = setInterval(() => {
-      setDisplayText(text.substring(0, index + 1));
-      index++;
-      if (index >= text.length) {
-        clearInterval(interval);
-      }
-    }, speed);
-
-    return () => clearInterval(interval);
-  }, [text, speed]);
-
-  return <div className="gradient radial">{displayText}</div>;
-};
 
 const App = () => {
-  const [loading, setLoading] = useState(true);
   const [darkMode, setDarkMode] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     if (darkMode) {
@@ -42,20 +20,28 @@ const App = () => {
     }
   }, [darkMode]);
 
-  if (loading) {
-    return <Loader onFinish={() => setLoading(false)} />;
-  }
+  const isActive = (path) => location.pathname === path;
 
   return (
     <div className={darkMode ? "dark-mode" : ""}>
       <header>
-        <Switch darkMode={darkMode} setDarkMode={setDarkMode} />
-        <TypingText text={"NOOR'S PORTFOLIO"} speed={100} />
+        <div className="header-top">
+          <div className="site-title">noor's portfolio </div>
+          <Switch darkMode={darkMode} setDarkMode={setDarkMode} />
+        </div>
         <nav>
-          <Link to="/" className="button-heading">ABOUT ME</Link>
-          <Link to="/projects" className="button-heading">PROJECTS</Link>
-          <Link to="/resources" className="button-heading">RESOURCES</Link>
-          <Link to="/blog" className="button-heading">BLOG</Link>
+          <Link to="/" className={isActive("/") || isActive("/about") ? "active" : ""}>
+            about
+          </Link>
+          <Link to="/projects" className={isActive("/projects") ? "active" : ""}>
+            projects
+          </Link>
+          <Link to="/resources" className={isActive("/resources") ? "active" : ""}>
+            resources
+          </Link>
+          <Link to="/blog" className={isActive("/blog") ? "active" : ""}>
+            blog
+          </Link>
         </nav>
       </header>
 
@@ -69,17 +55,17 @@ const App = () => {
         </Routes>
       </main>
 
-      <div className="social-links">
+      <footer className="social-links">
         <a href="https://github.com/noorbabar" target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-github"></i> GitHub
+          <i className="fab fa-github"></i> github
         </a>
         <a href="https://linkedin.com/in/noorbabar" target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-linkedin"></i> LinkedIn
+          <i className="fab fa-linkedin"></i> linkedin
         </a>
         <a href="mailto:nbabar233@gmail.com">
-          <i className="fas fa-envelope"></i> Email
+          <i className="fas fa-envelope"></i> email
         </a>
-      </div>
+      </footer>
     </div>
   );
 };

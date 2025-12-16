@@ -1,5 +1,4 @@
 import React from "react";
-import "../App.css"; // Import the CSS file
 
 const Switch = ({ darkMode, setDarkMode }) => {
   return (
@@ -10,9 +9,7 @@ const Switch = ({ darkMode, setDarkMode }) => {
         checked={darkMode} 
         onChange={() => setDarkMode(!darkMode)} 
       />
-      <label className="toggle" htmlFor="toggle">
-        <i />
-      </label>
+      <label className="toggle" htmlFor="toggle"></label>
     </div>
   );
 };

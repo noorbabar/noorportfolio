@@ -1,75 +1,61 @@
 import React from "react";
-import "../App.css";
 import "../style/resources.css";
 
 const Resources = () => {
   const resources = [
-    {
-      subject: "C Programming Fundamentals",
-      link: "",
-    },
-    {
-      subject: "Data Structures & Algorithms",
-      link: "",
-    },
-    {
-      subject: "Intro To Networking & Security",
-      link: "",
-    },
-    {
-      subject: "Cybersecurity Management",
-      link: "",
-    },
-    {
-      subject: "Intro To Cyber Security & Security Engineering",
-      link: "",
-    },
-    {
-      subject: "Object Oriented Programming",
-      link: "",
-    },
-    {
-      subject: "Professional Issues and Ethics in IT",
-      link: "",
-    },
-    {
-      subject: "CTF Resources",
-      link: "",
-    },
-    {
-      subject: "LeetCode Resources",
-      link: "",
-    },
-      {
-      subject: "Incoming in 2026: 3121, 6445, 6447, 6448, 6080, 2041, 3900 ",
-      link: "",
-    },
+    { name: "C Programming Fundamentals", code: "COMP1511", link: "#" }, 
+    { name: "Data Structures & Algorithms", code: "COMP2521", link: "#" },
+    { name: "Intro to Networking & Security (HD)", code: "INFS1701", link: "#" },
+    { name: "Cybersecurity Management", code: "INFS2701", link: "#" },
+    { name: "Intro to Cyber Security & Security Engineering (HD)", code: "COMP6441", link: "#" },
+    { name: "Object Oriented Programming", code: "COMP2511", link: "#" },
+    { name: "Professional Issues and Ethics in IT (HD/CM)", code: "COMP4920", link: "#" },
+    { name: "CTF Resources", code: "CTF", link: "#" },
+    { name: "LeetCode Resources", code: "ALGO", link: "#" },
+  ];
+
+  const upcoming = [
+    "COMP3121", "COMP6445", "COMP6443", 
+    "COMP6448", "COMP6080", "COMP2041", "COMP3900",
+    "COMP3900", "COMP1521"
   ];
 
   return (
-     <div className="resources-page">
-      <h1 className="about-me-heading">RESOURCES</h1>
-         <div className="resources-container">
-      <div className="sidebar">
-        <h3>these are a compilation of my uni notes & resources (i'll be adding in the links soon!) :)</h3>
+    <div className="resources-section">
+      <h1>resources</h1>
+      <p className="section-description">
+        comprehensive notes, guides, and materials from my coursework at unsw.
+      </p>
+      <p className="employer-note">
+        <strong> links will be uploaded soon. </strong>these resources demonstrate my technical documentation skills, 
+        understanding of core CS concepts, and commitment to continuous learning.
+      </p>
 
-
+      <div className="resources-list">
         {resources.map((item, index) => (
-          <div key={index} className="subject">
-            <a
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="subject-title"
-            >
-              {item.subject}
-              <span className="arrow">&#9654;</span>
-            </a>
-          </div>
+          <a 
+            key={index} 
+            href={item.link} 
+            className="resource-item"
+            target={item.link !== "#" ? "_blank" : "_self"}
+            rel={item.link !== "#" ? "noopener noreferrer" : ""}
+          >
+            <span className="resource-code">{item.code}</span>
+            <span className="resource-name">{item.name}</span>
+            <span className="resource-arrow">→</span>
+          </a>
         ))}
       </div>
+
+      <div className="upcoming-section">
+        <h2>upcoming in 2026</h2>
+        <div className="upcoming-list">
+          {upcoming.map((code, index) => (
+            <span key={index} className="upcoming-code">{code}</span>
+          ))}
+        </div>
+      </div>
     </div>
-  </div>
   );
 };
 

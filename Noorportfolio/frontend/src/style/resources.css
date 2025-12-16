@@ -1,65 +1,117 @@
-.resources-container {
-  display: flex;
-  justify-content: center;
-  padding: 40px;
-  max-width: 900px;
+.resources-section {
+  max-width: 800px;
   margin: 0 auto;
-  color: #e0e0e0;
-  font-family: "Courier New", monospace;
-  min-height: 100vh;
 }
 
-.sidebar {
-  width: 100%;
+.section-description {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.employer-note {
+  background: var(--code-bg);
+  padding: 1rem 1.5rem;
+  border-left: 3px solid #e77ec2;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.employer-note strong {
+  color: #e77ec2;
+  font-weight: 600;
+}
+
+.resources-list {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+
+.resource-item {
+  display: grid;
+  grid-template-columns: 120px 1fr auto;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.2s, border-color 0.2s;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.resource-item:last-child {
+  border-bottom: none;
+}
+
+.resource-item:hover {
+  background: var(--code-bg);
+  border-left: 3px solid #e77ec2;
+}
+
+.resource-code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  color: #e77ec2;
+  font-weight: 600;
+}
+
+.resource-name {
+  font-size: 0.95rem;
+  color: var(--text);
   text-align: left;
 }
 
-.about-me-heading {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 8px;
-  text-align: center;
-  color: #000000;
-  text-shadow: 0 0 10px #00ffff;
+.resource-arrow {
+  font-size: 1.2rem;
+  color: #e77ec2;
+  transition: transform 0.2s, color 0.2s;
 }
 
-.sidebar h3 {
-  font-weight: 400;
-  font-size: 14px;
-  text-align: center;
-  color: #aaa;
-  margin-bottom: 40px;
+.resource-item:hover .resource-arrow {
+  transform: translateX(5px);
+  color: #e23ca8;
 }
 
-.subject {
-  margin-bottom: 18px;
+.upcoming-section {
+  padding: 2rem;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
 }
 
-.subject-title {
-  color: #000000;
-  text-decoration: none;
-  font-size: 15px;
-  letter-spacing: 0.5px;
-  transition: color 0.2s ease, text-shadow 0.2s ease;
-  display: inline-block;
-  padding: 5px 0;
+.upcoming-section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
 }
 
-.subject-title:hover {
-  color: #cf1a77;
-  text-shadow: 0 0 6px #e8c7ac;
+.upcoming-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.upcoming-code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  background: var(--code-bg);
+  color: var(--text);
+  padding: 0.5rem 1rem;
+  border-radius: 2px;
+  border: 1px solid var(--border);
 }
 
 @media (max-width: 768px) {
-  .resources-container {
-    padding: 20px;
+  .resource-item {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 1rem;
   }
 
-  .about-me-heading {
-    font-size: 22px;
-  }
-
-  .subject-title {
-    font-size: 14px;
+  .resource-arrow {
+    display: none;
   }
 }

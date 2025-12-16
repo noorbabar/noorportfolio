@@ -1,131 +1,80 @@
-import React, { useState, useEffect } from "react";
-import Slider from "react-slick";
-import { motion } from "framer-motion";
-import "../App.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import '../style/home.css';
-import '../style/utilities.css';
+import React, { useState } from "react";
+import "../style/about.css";
 
 const About = () => {
-  const [interests, setInterests] = useState("Watching K-Dramas");
-  const [movies, setMovies] = useState("Maze Runner");
   const [showFunFacts, setShowFunFacts] = useState(false);
-
-  useEffect(() => {
-    const interestsList = [
-      "Gym", "Lifting", "Watching the sunrise", "Badminton",
-      "Hanging out w my friends", "Baking", "Traveling",
-      "Taking naps", "Chess", "Walking my cat"
-    ];
-
-    const moviesList = [
-      "Black Panther", "Maze Runner", "Night Agent", "Venom", "Alchemy of Souls",
-      "Prison Break", "The Punisher", "Divergent", "White Chicks", "Business Proposal",
-      "Avatar", "Karate Kid", "+ 200 more"
-    ];
-
-    let i = 0, m = 0;
-
-    const interestsInterval = setInterval(() => {
-      setInterests(interestsList[i]);
-      i = (i + 1) % interestsList.length;
-    }, 2500);
-
-    const moviesInterval = setInterval(() => {
-      setMovies(moviesList[m]);
-      m = (m + 1) % moviesList.length;
-    }, 2500);
-
-    return () => {
-      clearInterval(interestsInterval);
-      clearInterval(moviesInterval);
-    };
-  }, []);
-
-  const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      { breakpoint: 768, settings: { slidesToShow: 1 } }
-    ]
-  };
-
-  const catMedia = [
-    { type: "image", src: "/cat1.jpg", alt: "Milo playing with a toy" },
-    { type: "image", src: "/cat2.jpg", alt: "Milo napping peacefully" },
-    { type: "image", src: "/cat3.jpg", alt: "Milo looking curious" },
-    { type: "video", src: "/cat4.mp4", alt: "Milo playing", autoplay: true },
-    { type: "video", src: "/cat5.mov", alt: "Milo exploring", autoplay: true },
-  ];
+  const [showMilo, setShowMilo] = useState(false);
 
   return (
     <section className="about-section">
-      <motion.div
-        className="intro-block"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        <h1 className="about-me-heading">ABOUT ME</h1>
-        <p className="intro-line">Hi, I’m <strong>Noor</strong>, a passionate <span>Computer Science student</span> at UNSW majoring in Security Engineering.</p>
-        <p> Big fan of solving problems, building cool things & making an impact!</p>
-        <p> I aim to become a Penetration Tester, Cyber Security Analyst or Consultant!</p>
-        <p><small><em>Always learning. Always building.</em></small></p>
-        <p>Check out my <strong>Projects</strong>, <strong>Resources</strong>, or <strong>Articles</strong> to learn more!</p>
-      </motion.div>
+      <div className="intro">
+        <h1>helloo, i'm noor </h1>
+        <p className="lead">
+          computer science student @ unsw, majoring in security engineering.
+        </p>
+        <p>
+          i'm passionate about making an impact, solving problems, building useful things, and continuously learning and growing !
+        </p>
+        <p>
+          currently focused on cybersecurity, penetration testing, and secure software development.
+        </p>
+      </div>
 
-      <motion.div
-        className="fun-facts-toggle"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
-      >
-      <button onClick={() => setShowFunFacts(!showFunFacts)} className="gradient-button">
-          {showFunFacts ? "Hide Fun Facts" : "Show Fun Facts"}
+      <div className="call-to-action">
+        <p>
+          check out my <a href="/projects">projects</a>, browse my <a href="/resources">study resources</a>, 
+          or read my <a href="/blog">blog posts</a> to learn more about what i'm working on.
+        </p>
+      </div>
+
+      <div className="button-group">
+        <button 
+          onClick={() => setShowFunFacts(!showFunFacts)} 
+          className="toggle-button"
+        >
+          {showFunFacts ? "hide fun facts" : "show fun facts"}
         </button>
-      </motion.div>
+        
+        <button 
+          onClick={() => setShowMilo(!showMilo)} 
+          className="toggle-button"
+        >
+          {showMilo ? "hide milo 🐱" : "meet milo 🐱"}
+        </button>
+      </div>
 
       {showFunFacts && (
-        <motion.div
-          className="fun-facts-section"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-        <h1 className="about-me-heading">FUN FACTS</h1>
-          <table className="fun-table">
-            <tbody>
-              <tr><td><strong>Age:</strong></td><td>20</td></tr>
-              <tr><td><strong>Fav Quote:</strong></td><td>"When you set your mind to something, you’ll always find a way to make it work." — Imam Ghazali</td></tr>
-              <tr><td><strong>Best Advice:</strong></td><td>"If you only do what you can do, you'll never be more than you are now. The only true limit is the one you set for yourself" - Shifu </td></tr>
-              <tr><td><strong>Current Interests:</strong></td><td><span className="highlight">{interests}</span></td></tr>
-              <tr><td><strong> Fav Movie/Show:</strong></td><td><span className="highlight">{movies}</span></td></tr>
-            </tbody>
-          </table>
+        <div className="fun-facts">
+          <h2>fun facts</h2>
+          <div className="facts-grid">
+            <div className="fact">
+              <span className="fact-label">age:</span>
+              <span className="fact-value">20</span>
+            </div>
+            <div className="fact">
+              <span className="fact-label">interests:</span>
+              <span className="fact-value">gym, lifting, badminton, chess, cooking, k-dramas, travelling & trying out new things</span>
+            </div>
+            <div className="fact">
+              <span className="fact-label">favorite quote:</span>
+              <span className="fact-value">"when you set your mind to something, you'll always find a way to make it work" - imam ghazali</span>
+            </div>
+          </div>
+        </div>
+      )}
 
-          <h1 className="about-me-heading">🐾 Meet MILO!</h1>
-          <Slider {...sliderSettings}>
-            {catMedia.map((item, index) => (
-              <div key={index} className="media-container">
-                {item.type === "image" ? (
-                  <img src={item.src} alt={item.alt} className="media" />
-                ) : (
-                  <video
-                    src={item.src}
-                    className="media"
-                    controls
-                    autoPlay={item.autoplay}
-                    muted
-                  />
-                )}
-              </div>
-            ))}
-          </Slider>
-        </motion.div>
+      {showMilo && (
+        <div className="milo-section">
+          <h2>meet milo!</h2>
+          <p className="muted">my cat who makes everything better</p>
+          <div className="media-grid">
+            <img src="/cat1.jpg" alt="Milo playing" className="media-item" />
+            <img src="/cat2.jpg" alt="Milo napping" className="media-item" />
+            <img src="/cat3.jpg" alt="Milo curious" className="media-item" />
+            <video src="/cat4.mp4" className="media-item" controls muted />
+            <video src="/cat5.mov" className="media-item" controls muted />
+          </div>
+        </div>
       )}
     </section>
   );

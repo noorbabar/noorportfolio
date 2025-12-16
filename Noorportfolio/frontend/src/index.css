@@ -1,32 +1,6 @@
-/* Global styles for the whole app (applies to the body and root elements) */
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  --primary-bg-light: rgb(245, 231, 215);
-  --primary-bg-dark: #121212;
-  --text-light: rgba(0, 0, 0, 0.9);
-  --text-dark: #e0e0e0;
-}
-
-/* Light mode defaults */
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #fdfdfd;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #f7f6f6;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-
-/* Dark mode defaults */
-body.dark-mode {
-  background-color: var(--primary-bg-dark);
-  color: var(--text-dark);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
