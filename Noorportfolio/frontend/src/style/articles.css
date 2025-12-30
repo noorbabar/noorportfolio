@@ -1,5 +1,5 @@
 .blog-section {
-  max-width: 800px;
+  max-width: none;
 }
 
 .section-description {
@@ -8,75 +8,102 @@
 }
 
 .blog-placeholder {
-  margin-top: 2rem;
+  margin-top: 3rem;
 }
 
 .blog-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  padding: 2rem;
-  transition: transform 0.2s, border-color 0.2s;
+  background: transparent;
+  border: 2px dashed var(--border);
+  border-radius: 0;
+  padding: 2.5rem;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.blog-card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border: 3px solid var(--accent);
+  opacity: 0;
+  transition: opacity 0.2s;
 }
 
 .blog-card:hover {
-  transform: translateY(-2px);
-  border-color: #e77ec2;
+  transform: rotate(-1deg);
+  border-style: solid;
+  border-color: var(--text);
+}
+
+.blog-card:hover::before {
+  opacity: 1;
 }
 
 .blog-date {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
   margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .blog-card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .blog-snippet {
-  color: var(--text-muted);
-  margin-bottom: 1rem;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
 }
 
 .blog-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
 }
 
 .blog-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.85rem;
   color: var(--accent);
   text-decoration: none;
-  transition: opacity 0.2s;
+  transition: all 0.1s;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .blog-link:hover {
-  opacity: 0.7;
+  background: transparent;
+  color: var(--accent);
 }
 
 .blog-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 1rem;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
 }
 
 .blog-tag {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 0.75rem;
-  background: var(--code-bg);
-  color: var(--text-muted);
-  padding: 0.25rem 0.5rem;
-  border-radius: 2px;
+  font-size: 0.7rem;
+  background: var(--text);
+  color: var(--bg);
+  padding: 0.4rem 0.7rem;
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
 }
 
 @media (max-width: 768px) {

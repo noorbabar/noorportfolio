@@ -11,7 +11,7 @@
 .employer-note {
   background: var(--code-bg);
   padding: 1rem 1.5rem;
-  border-left: 3px solid #e77ec2;
+  border-left: 3px solid var(--accent);
   border-radius: 4px;
   margin-bottom: 2rem;
   font-size: 0.9rem;
@@ -19,7 +19,7 @@
 }
 
 .employer-note strong {
-  color: #e77ec2;
+  color: var(--accent);
   font-weight: 600;
 }
 
@@ -48,13 +48,12 @@
 
 .resource-item:hover {
   background: var(--code-bg);
-  border-left: 3px solid #e77ec2;
 }
 
 .resource-code {
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.85rem;
-  color: #e77ec2;
+  color: var(--accent);
   font-weight: 600;
 }
 
@@ -66,13 +65,12 @@
 
 .resource-arrow {
   font-size: 1.2rem;
-  color: #e77ec2;
+  color: var(--accent);
   transition: transform 0.2s, color 0.2s;
 }
 
 .resource-item:hover .resource-arrow {
   transform: translateX(5px);
-  color: #e23ca8;
 }
 
 .upcoming-section {
