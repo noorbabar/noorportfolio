@@ -1,17 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "../style/resources.css";
 
 const Resources = () => {
+  const [selectedResource, setSelectedResource] = useState(null);
+
   const resources = [
-    { name: "C Programming Fundamentals", code: "COMP1511", link: "#" }, 
-    { name: "Data Structures & Algorithms", code: "COMP2521", link: "#" },
-    { name: "Intro to Networking & Security (HD)", code: "INFS1701", link: "#" },
-    { name: "Cybersecurity Management", code: "INFS2701", link: "#" },
-    { name: "Intro to Cyber Security & Security Engineering (HD)", code: "COMP6441", link: "#" },
-    { name: "Object Oriented Programming", code: "COMP2511", link: "#" },
-    { name: "Professional Issues and Ethics in IT (HD/CM)", code: "COMP4920", link: "#" },
-    { name: "CTF Resources", code: "CTF", link: "#" },
-    { name: "LeetCode Resources", code: "ALGO", link: "#" },
+    { 
+      name: "C Programming Fundamentals", 
+      code: "COMP1511", 
+      notionLink: "https://gleaming-xylophone-d5a.notion.site/ebd//20b955cde43a81d490cbe004b7941ed2",
+      hasNotes: true 
+    }, 
+    { name: "Data Structures & Algorithms", code: "COMP2521", hasNotes: false },
+    { name: "Intro to Networking & Security (HD)", code: "INFS1701", hasNotes: false },
+    { name: "Cybersecurity Management", code: "INFS2701", hasNotes: false },
+    { name: "Intro to Cyber Security & Security Engineering (HD)", code: "COMP6441", hasNotes: false },
+    { name: "Object Oriented Programming", code: "COMP2511", hasNotes: false },
+    { name: "Professional Issues and Ethics in IT (HD/CM)", code: "COMP4920", hasNotes: false },
+    { name: "CTF Resources", code: "CTF", hasNotes: false },
+    { name: "LeetCode Resources", code: "ALGO", hasNotes: false },
   ];
 
   const upcoming = [
@@ -20,32 +27,66 @@ const Resources = () => {
     "COMP3900", "COMP1521"
   ];
 
+  const handleResourceClick = (item) => {
+    if (item.hasNotes) {
+      setSelectedResource(item);
+    }
+  };
+
+  const closeModal = () => {
+    setSelectedResource(null);
+  };
+
   return (
     <div className="resources-section">
       <h1>resources</h1>
       <p className="section-description">
-        comprehensive notes, guides, and materials from my coursework at unsw.
-      </p>
+        curated notes and materials from selected UNSW courses (math, electives, & gen eds not included).
+      </p>    
       <p className="employer-note">
-        <strong> links will be uploaded soon. </strong>these resources demonstrate my technical documentation skills, 
+        <strong>click on any course to view my notes.</strong> these resources demonstrate my technical documentation skills, 
         understanding of core CS concepts, and commitment to continuous learning.
       </p>
 
       <div className="resources-list">
         {resources.map((item, index) => (
-          <a 
+          <div 
             key={index} 
-            href={item.link} 
-            className="resource-item"
-            target={item.link !== "#" ? "_blank" : "_self"}
-            rel={item.link !== "#" ? "noopener noreferrer" : ""}
+            onClick={() => handleResourceClick(item)}
+            className={`resource-item ${item.hasNotes ? 'has-notes' : 'coming-soon'}`}
           >
             <span className="resource-code">{item.code}</span>
             <span className="resource-name">{item.name}</span>
-            <span className="resource-arrow">→</span>
-          </a>
+            <span className="resource-arrow">{item.hasNotes ? '→' : '(coming soon)'}</span>
+          </div>
         ))}
       </div>
+
+      {selectedResource && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-header">
+              <div>
+                <h2>{selectedResource.code}</h2>
+                <p>{selectedResource.name}</p>
+              </div>
+              <button className="close-button" onClick={closeModal}>
+                ✕
+              </button>
+            </div>
+            <div className="modal-body">
+              <iframe 
+                src={selectedResource.notionLink}
+                width="100%" 
+                height="100%" 
+                frameBorder="0" 
+                allowFullScreen
+                title={`${selectedResource.code} Notes`}
+              />
+            </div>
+          </div>
+        </div>
+      )}
 
       <div className="upcoming-section">
         <h2>upcoming in 2026</h2>
