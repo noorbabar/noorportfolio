@@ -6,7 +6,7 @@ const Blog = () => {
     <div className="blog-section">
       <h1>blog</h1>
       <p className="section-description">
-        thoughts on security, coding, and learning. coming soon.
+        documenting my learning journey, ctf write-ups, and insights into cybersecurity and programming.
       </p>
 
       <div className="blog-placeholder">
@@ -14,7 +14,7 @@ const Blog = () => {
           <div className="blog-date">tbd</div>
           <h3>first post incoming</h3>
           <p className="blog-snippet">
-            working on it. probably something about ctfs or my learning journey.
+            writing it (maybe)
           </p>
         </div>
       </div>
