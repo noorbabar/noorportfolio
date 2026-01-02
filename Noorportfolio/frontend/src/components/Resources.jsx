@@ -11,20 +11,37 @@ const Resources = () => {
       notionLink: "https://gleaming-xylophone-d5a.notion.site/ebd//20b955cde43a81d490cbe004b7941ed2",
       hasNotes: true 
     }, 
-    { name: "Data Structures & Algorithms", code: "COMP2521", hasNotes: false },
-    { name: "Intro to Networking & Security (HD)", code: "INFS1701", hasNotes: false },
+    { name: "Data Structures & Algorithms", 
+      code: "COMP2521", 
+      notionLink: "https://gleaming-xylophone-d5a.notion.site/ebd//151955cde43a807eb33afe0bf396b750",
+      hasNotes: true
+    },
+    { name: "Software Engineering Fundamentals (HD)", code: "COMP1531", hasNotes: false },
+    { name: "Intro to Networking & Security (HD)",
+      code: "INFS1701", 
+      notionLink: "https://gleaming-xylophone-d5a.notion.site/ebd//20b955cde43a812286e6c8321d03cfea",
+      hasNotes: true
+    },
     { name: "Cybersecurity Management", code: "INFS2701", hasNotes: false },
-    { name: "Intro to Cyber Security & Security Engineering (HD)", code: "COMP6441", hasNotes: false },
+    { name: "Intro to Cyber Security & Security Engineering (HD)", 
+      code: "COMP6441", 
+      notionLink: "https://gleaming-xylophone-d5a.notion.site/ebd//20b955cde43a81b596c0f8a41953b69f",
+      hasNotes: true 
+    },
     { name: "Object Oriented Programming", code: "COMP2511", hasNotes: false },
-    { name: "Professional Issues and Ethics in IT (HD/CM)", code: "COMP4920", hasNotes: false },
+    { name: "Professional Issues and Ethics in IT (HD/CM)",
+      code: "COMP4920", 
+      notionLink: "https://gleaming-xylophone-d5a.notion.site/ebd//26e955cde43a8032baf2d36682518842",
+      hasNotes: true 
+    },
     { name: "CTF Resources", code: "CTF", hasNotes: false },
     { name: "LeetCode Resources", code: "ALGO", hasNotes: false },
   ];
 
   const upcoming = [
-    "COMP3121", "COMP6445", "COMP6443", 
-    "COMP6448", "COMP6080", "COMP2041", "COMP3900",
-    "COMP3900", "COMP1521"
+    "COMP6443", "COMP2041", "COMP3121", 
+    "COMP6448", "COMP6080", "COMP3900",
+    "COMP6445", "COMP1521"
   ];
 
   const handleResourceClick = (item) => {
