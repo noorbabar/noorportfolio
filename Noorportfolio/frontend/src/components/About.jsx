@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import "../style/about.css";
 
 const About = () => {
@@ -22,8 +23,9 @@ const About = () => {
 
       <div className="call-to-action">
         <p>
-          check out my <a href="/Projects">projects</a>, browse my <a href="/Resources">study resources</a>, 
-          or read my <a href="/Blog">blog posts</a> to learn more about what i'm working on.
+          check out my <Link to="/Projects">projects</Link>, browse my{' '}
+          <Link to="/Resources">study resources</Link>, or read my{' '}
+          <Link to="/Blog">blog posts</Link> to learn more about what i'm working on.
         </p>
       </div>
 
