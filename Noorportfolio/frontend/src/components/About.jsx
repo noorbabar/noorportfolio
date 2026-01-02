@@ -22,8 +22,8 @@ const About = () => {
 
       <div className="call-to-action">
         <p>
-          check out my <a href="/projects">projects</a>, browse my <a href="/resources">study resources</a>, 
-          or read my <a href="/blog">blog posts</a> to learn more about what i'm working on.
+          check out my <a href="/Projects">projects</a>, browse my <a href="/Resources">study resources</a>, 
+          or read my <a href="/Blog">blog posts</a> to learn more about what i'm working on.
         </p>
       </div>
 
