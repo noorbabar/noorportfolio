@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Routes, Route, Link, useLocation } from "react-router-dom";
 import "./App.css";
 import Switch from "./components/Switch";
-
+import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/next"
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Blog from "./components/Blog";
@@ -24,6 +25,7 @@ const App = () => {
 
   return (
     <div className={darkMode ? "dark-mode" : ""}>
+      <Analytics />
       <header>
         <div className="header-top">
           <div className="site-title">noor's portfolio </div>
