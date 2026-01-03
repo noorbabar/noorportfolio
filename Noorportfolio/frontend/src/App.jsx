@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Routes, Route, Link, useLocation } from "react-router-dom";
 import "./App.css";
 import Switch from "./components/Switch";
-import { Analytics } from "@vercel/analytics/react";
+//import { Analytics } from "@vercel/analytics/react";
 import { Analytics } from "@vercel/analytics/next"
 import About from "./components/About";
 import Projects from "./components/Projects";
