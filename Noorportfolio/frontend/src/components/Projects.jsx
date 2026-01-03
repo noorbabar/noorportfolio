@@ -23,9 +23,9 @@ const Projects = () => {
     },
     {
       name: "TrackBite",
-      description: "In Progress: A Calorie Tracker & Wellness Companion",
+      description: "In Progress: A Wellness Companion",
       github: "https://github.com/noorbabar/TrackBite",
-      // demo: "https://track-bite.vercel.app/"
+      demo: "https://track-bite.vercel.app/"
     },
      {
       name: "ForgeHack: Assignee Recommender Agent",
