@@ -10,6 +10,12 @@ const Projects = () => {
       demo: "https://noorsportfolio.vercel.app/"
     },
     {
+      name: "In Progress:Network Troubleshooting Guide",
+      description: "A guide to diagnose and resolve common network issues.",
+      github: "https://github.com/noorbabar/guide-to-network-troubleshooting",
+      //demo: ""
+    },
+    {
       name: "Lock Step",
       description: "Cybersecurity Toolkit for Small Businesses",
       github: "https://github.com/noorbabar/cybersecurity-toolkit",
@@ -23,11 +29,11 @@ const Projects = () => {
     },
     {
       name: "TrackBite",
-      description: "In Progress: A Wellness Companion",
+      description: "A Wellness Companion for Women",
       github: "https://github.com/noorbabar/TrackBite",
       demo: "https://track-bite.vercel.app/"
     },
-     {
+    {
       name: "ForgeHack: Assignee Recommender Agent",
       description: "A Rovo Agent that assigns Jira issues to team members based on past work history, availability, expertise and more with recommendations.",
       github: "https://github.com/noorbabar/forgehack-forgezilla",
