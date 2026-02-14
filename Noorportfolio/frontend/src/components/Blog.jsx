@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../style/articles.css";
 
 const Blog = () => {
@@ -11,11 +12,14 @@ const Blog = () => {
 
       <div className="blog-placeholder">
         <div className="blog-card">
-          <div className="blog-date">tbd</div>
-          <h3>first post incoming</h3>
+          <div className="blog-date">february 2026</div>
+          <h3>creating a web application </h3>
           <p className="blog-snippet">
-            writing it (maybe)
+          how to set up your first github repo and create a simple web app. 
           </p>
+          <Link to="/guides/react-setup" className="blog-link">
+            view guide →
+          </Link>
         </div>
       </div>
     </div>

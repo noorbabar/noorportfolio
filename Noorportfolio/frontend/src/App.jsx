@@ -7,6 +7,7 @@ import { Analytics } from "@vercel/analytics/react";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import Blog from "./components/Blog";
+import ReactGuide from "./components/guides/ReactGuide";
 import Resources from "./components/Resources";
 
 const App = () => {
@@ -54,6 +55,7 @@ const App = () => {
           <Route path="/projects" element={<Projects />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/guides/react-setup" element={<ReactGuide />} />
         </Routes>
       </main>
 
